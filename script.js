@@ -5,14 +5,21 @@ var currentRegex = 1;
 function switchRegex() {
   let regexLabel = document.getElementById("regexLabel");
   let languageLabel = document.getElementById("languageLabel");
+  let regexDiagram1 = document.getElementById("regexDiagram1");
+  let regexDiagram2 = document.getElementById("regexDiagram2");
+
   if (currentRegex == 2) {
     regexLabel.textContent = regex1;
     languageLabel.textContent = "[a,b]";
     currentRegex = 1;
+    regexDiagram1.classList.remove("d-none");
+    regexDiagram2.classList.add("d-none");
   } else {
     regexLabel.textContent = regex2;
     languageLabel.textContent = "[0,1]";
     currentRegex = 2;
+    regexDiagram1.classList.add("d-none");
+    regexDiagram2.classList.remove("d-none");
   }
 }
 

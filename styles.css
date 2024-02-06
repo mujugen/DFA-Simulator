@@ -17,3 +17,16 @@ body {
 .bg-light {
   background-color: #edf2f7 !important;
 }
+
+.diagram {
+  width: 100%;
+  min-height: 400px;
+}
+
+.hover {
+  transition: transform 0.3s ease-in-out;
+}
+
+.hover:hover {
+  transform: scale(1.2);
+}
