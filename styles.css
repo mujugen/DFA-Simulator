@@ -1,0 +1,15 @@
+body {
+  background-color: rgb(247, 251, 252);
+  font-family: "Poppins", sans-serif;
+}
+
+.highlighted {
+  border-color: #edf2f7 !important;
+  background-color: #edf2f7 !important;
+  padding: 4px;
+}
+
+.center-vertical {
+  margin-top: auto;
+  margin-bottom: auto;
+}

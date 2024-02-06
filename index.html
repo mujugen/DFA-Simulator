@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Automata</title>
+  </head>
+  <body>
+    <div
+      class="d-flex align-items-center flex-column w-100 h-100 justify-content-center p-5 background"
+    >
+      <div
+        class="d-flex flex-column w-75 justify-content-center p-5 rounded border border-dark"
+      >
+        <h1 class="xl pb-4 font-weight-bold">DFA Simulator</h1>
+        <h5>Input String:</h5>
+        <input class="w-75" type="text" id="inputString" />
+        <div class="pt-3">
+          <button class="btn btn-dark">Validated</button>
+          <button class="btn btn-dark">Simulate</button>
+          <button class="btn btn-dark">Clear</button>
+        </div>
+      </div>
+      <div
+        class="d-flex mt-5 flex-column w-75 justify-content-center p-5 rounded border border-dark"
+      >
+        <div class="d-flex w-100 border-bottom pb-4 mb-2">
+          <div class="d-flex flex-row pr-5">
+            <h5 class="center-vertical font-weight-bold">
+              Regular Expression:
+            </h5>
+            <p class="ml-3 rounded highlighted center-vertical">
+              ab+ababa+bab+aba
+            </p>
+          </div>
+
+          <div class="d-flex flex-row">
+            <h5 class="center-vertical font-weight-bold">Language:</h5>
+            <p class="ml-3 rounded highlighted center-vertical">[a,b]</p>
+          </div>
+        </div>
+        <div class="w-100 h-100">asdf</div>
+      </div>
+    </div>
+  </body>
+</html>
