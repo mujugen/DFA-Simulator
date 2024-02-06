@@ -29,9 +29,12 @@
         <h5>Input String:</h5>
         <input class="w-75" type="text" id="inputString" />
         <div class="pt-3">
-          <button class="btn btn-dark">Validated</button>
-          <button class="btn btn-dark">Simulate</button>
-          <button class="btn btn-dark">Clear</button>
+          <button class="btn btn-dark" onclick="validate()">Validate</button>
+          <button class="btn btn-dark" onclick="simulate()">Simulate</button>
+          <button class="btn btn-dark" onclick="switchRegex()" id="switchBtn">
+            Switch RegEx
+          </button>
+          <button class="btn btn-light">Clear</button>
         </div>
       </div>
       <div
@@ -42,18 +45,27 @@
             <h5 class="center-vertical font-weight-bold">
               Regular Expression:
             </h5>
-            <p class="ml-3 rounded highlighted center-vertical">
-              ab+ababa+bab+aba
+            <p
+              class="ml-3 rounded highlighted center-vertical font-weight-bold"
+              id="regexLabel"
+            >
+              (b+aa+ab) (a+b)* (bb+aba+ab)* (aaa+bbb) (a+b) (a+b+ab)*
             </p>
           </div>
 
           <div class="d-flex flex-row">
             <h5 class="center-vertical font-weight-bold">Language:</h5>
-            <p class="ml-3 rounded highlighted center-vertical">[a,b]</p>
+            <p
+              class="ml-3 rounded highlighted center-vertical font-weight-bold"
+              id="languageLabel"
+            >
+              [a,b]
+            </p>
           </div>
         </div>
         <div class="w-100 h-100">asdf</div>
       </div>
     </div>
   </body>
+  <script src="script.js"></script>
 </html>
