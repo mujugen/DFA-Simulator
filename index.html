@@ -37,7 +37,7 @@
             <button class="btn btn-dark" onclick="validate()">Validate</button>
             <button class="btn btn-dark" onclick="simulate()">Simulate</button>
             <button class="btn btn-dark" onclick="switchRegex()" id="switchBtn">
-              Switch RegEx
+              Switch Problem
             </button>
             <button class="btn btn-light">Clear</button>
           </div>
@@ -726,10 +726,104 @@
         </div>
         <div
           id="content2-bottom"
-          class="d-flex flex-column h-100 w-100 justify-content-center p-5 rounded border border-light"
+          class="h-100 w-100 p-5 rounded border border-light"
         >
-          <h1 class="xl pb-4 h-100 font-weight-bold">CFG</h1>
-          <h2 class="xl pb-4 h-100 font-weight-bold">asdf</h2>
+          <h1 class="xl pb-4 font-weight-bold">PDA</h1>
+          <div
+            class="d-flex flex-row align-items-center w-100 h-100 diagram justify-content-center"
+          >
+            <svg
+              width="100%"
+              height="20vh"
+              viewBox="0 0 500 300"
+              preserveAspectRatio="xMidYMid meet"
+              xmlns="http://www.w2.org/2000/svg"
+            >
+              <defs>
+                <marker
+                  id="arrow"
+                  markerWidth="10"
+                  markerHeight="10"
+                  refX="21"
+                  refY="3"
+                  orient="auto"
+                  markerUnits="strokeWidth"
+                >
+                  <path d="M0,0 L0,6 L9,3 z" class="arrow" />
+                </marker>
+                <marker
+                  id="arrow2"
+                  markerWidth="20"
+                  markerHeight="20"
+                  refX="8.5"
+                  refY="3.5"
+                  orient="auto"
+                  markerUnits="strokeWidth"
+                >
+                  <path d="M0,0 L0,6 L9,3 z" class="arrow" />
+                </marker>
+              </defs>
+              <g id="pdaDiagram1">
+                <!-- q0 to q1 transition -->
+                <g>
+                  <line x1="50" y1="50%" x2="150" y2="20%" class="line" />
+                  <text
+                    class="line-text"
+                    x="88"
+                    y="33%"
+                    alignment-baseline="middle"
+                  >
+                    a
+                  </text>
+                </g>
+                <!-- q0 to q1 transition -->
+                <!-- q0 to q2 transition -->
+                <g>
+                  <line x1="50" y1="50%" x2="250" y2="50%" class="line" />
+                  <text
+                    class="line-text"
+                    x="150"
+                    y="47%"
+                    alignment-baseline="middle"
+                  >
+                    b
+                  </text>
+                </g>
+                <!-- q0 to q2 transition -->
+                <!-- q1 to q2 transition -->
+                <g>
+                  <line x1="150" y1="20%" x2="250" y2="50%" class="line" />
+                  <text
+                    class="line-text"
+                    x="212"
+                    y="33%"
+                    alignment-baseline="middle"
+                  >
+                    a,b
+                  </text>
+                </g>
+                <!-- q1 to q2 transition -->
+                <!-- q0 circle -->
+                <g class="hover">
+                  <circle r="25" cx="50" cy="50%" />
+                  <text x="50" y="50%" dy=".25em" dx="-.1em">q0</text>
+                </g>
+                <!-- q0 circle -->
+                <!-- q1 circle -->
+                <g class="hover">
+                  <circle r="25" cx="150" cy="20%" />
+                  <text x="150" y="20%" dy=".25em" dx="-.1em">q1</text>
+                </g>
+                <!-- q1 circle -->
+                <!-- q2 circle -->
+                <g class="hover">
+                  <circle r="25" cx="250" cy="50%" />
+                  <text x="250" y="50%" dy=".25em" dx="-.1em">q2</text>
+                </g>
+                <!-- q2 circle -->
+              </g>
+            </svg>
+          </div>
         </div>
       </div>
     </div>
