@@ -47,6 +47,11 @@ input[type="text"] {
   stroke-width: 2;
   marker-end: url(#arrow);
 }
+.line-curved {
+  stroke: #2d3748;
+  stroke-width: 2;
+  marker-end: url(#arrow2);
+}
 
 .arrow {
   fill: #2d3748;
@@ -54,4 +59,5 @@ input[type="text"] {
 
 .line-text {
   fill: #2d3748 !important;
+  font-weight: bold;
 }
