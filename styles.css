@@ -80,20 +80,20 @@ circle {
   fill: rgb(248, 254, 255);
 }
 .contentParent {
-  flex-direction: row !important;
-  max-height: 100vh;
+  height: 100vh !important;
+  max-width: 100vw;
+  flex-wrap: wrap;
 }
 @media (max-width: 1280px) {
   .contentParent {
     flex-direction: column !important;
-    max-height: fit-content;
+    height: auto !important;
   }
   #content1 {
     flex: 1;
   }
   #content2 {
     flex: 1;
-    padding: 3rem !important;
   }
 }
 #content1 {
@@ -101,4 +101,13 @@ circle {
 }
 #content2 {
   flex: 1;
+  padding-left: 0 !important;
+}
+
+#content2 :first-child {
+  flex: 1;
+}
+
+#content2 :last-child {
+  flex: 2;
 }

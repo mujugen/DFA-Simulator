@@ -20,14 +20,14 @@
   </head>
   <body>
     <div
-      class="d-flex align-items-center flex-row w-100 h-100 justify-content-center p-5 background contentParent"
+      class="d-flex align-items-center flex-row w-100 h-100 justify-content-center background contentParent"
     >
       <div
         id="content1"
-        class="d-flex align-items-center flex-column justify-content-center p-5"
+        class="d-flex align-items-center flex-column justify-content-center p-5 h-100"
       >
         <div
-          class="d-flex flex-column w-100 justify-content-center p-5 rounded border border-light"
+          class="d-flex flex-column w-100 h-100 justify-content-center p-5 rounded border border-light"
         >
           <h1 class="xl pb-4 font-weight-bold">DFA Simulator</h1>
           <h5>Input String:</h5>
@@ -698,17 +698,33 @@
       </div>
       <div
         id="content2"
-        class="d-flex align-items-center flex-column justify-content-center"
+        class="d-flex h-100 p-5 align-items-center flex-column justify-content-center"
       >
         <div
-          class="d-flex flex-column w-100 justify-content-center p-5 rounded border border-light"
+          class="d-flex flex-column w-100 mb-5 justify-content-center p-5 rounded border border-light"
         >
-          <h1 class="xl pb-4 font-weight-bold">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit
-            accusantium molestias rerum, nesciunt fuga repellendus voluptatibus
-            eos eaque quidem quos illo iure asperiores! Itaque ipsum
-            necessitatibus, explicabo deserunt minima doloribus?
-          </h1>
+          <h1 class="xl pb-4 font-weight-bold">CFG</h1>
+          <h2 class="xl pb-4 font-weight-bold" id="cfg1">
+            S -> ABCDEF<br />A -> b | aa | ab<br />B -> aB | bB | ε<br />C ->
+            bbC | abaC | abC | ε<br />D -> aaa | bbb<br />E -> a | b<br />F ->
+            aF | bF | ε
+          </h2>
+          <h2 class="xl pb-4 font-weight-bold d-none" id="cfg2">
+            S -> ABCDEFG<br />
+            A -> 1A | 0A | ε<br />
+            B -> 11 | 00 | 101 | 010<br />
+            C -> 1C | 0C | 11C | 00C | 101C | ε<br />
+            D -> 11 | 00<br />
+            E -> 11E | 00E | 101E | ε<br />
+            F -> 1 | 0<br />
+            G -> 1G | 0G | ε
+          </h2>
+        </div>
+        <div
+          class="d-flex flex-column h-100 w-100 justify-content-center p-5 rounded border border-light"
+        >
+          <h1 class="xl pb-4 h-100 font-weight-bold">CFG</h1>
+          <h2 class="xl pb-4 h-100 font-weight-bold">asdf</h2>
         </div>
       </div>
     </div>
