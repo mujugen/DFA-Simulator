@@ -61,3 +61,17 @@ input[type="text"] {
   fill: #2d3748 !important;
   font-weight: bold;
 }
+
+text {
+  pointer-events: none;
+  user-select: none;
+  text-anchor: middle;
+  fill: black;
+  font-size: 15;
+}
+
+circle {
+  stroke: #0062ff;
+  stroke-width: 2;
+  fill: rgb(248, 254, 255);
+}
