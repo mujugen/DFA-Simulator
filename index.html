@@ -20,675 +20,695 @@
   </head>
   <body>
     <div
-      class="d-flex align-items-center flex-column w-100 h-100 justify-content-center p-5 background"
+      class="d-flex align-items-center flex-row w-100 h-100 justify-content-center p-5 background contentParent"
     >
       <div
-        class="d-flex flex-column w-75 justify-content-center p-5 rounded border border-light"
+        id="content1"
+        class="d-flex align-items-center flex-column justify-content-center p-5"
       >
-        <h1 class="xl pb-4 font-weight-bold">DFA Simulator</h1>
-        <h5>Input String:</h5>
-        <input class="w-75" type="text" id="inputString" />
-        <div class="pt-3">
-          <button class="btn btn-dark" onclick="validate()">Validate</button>
-          <button class="btn btn-dark" onclick="simulate()">Simulate</button>
-          <button class="btn btn-dark" onclick="switchRegex()" id="switchBtn">
-            Switch RegEx
-          </button>
-          <button class="btn btn-light">Clear</button>
+        <div
+          class="d-flex flex-column w-100 justify-content-center p-5 rounded border border-light"
+        >
+          <h1 class="xl pb-4 font-weight-bold">DFA Simulator</h1>
+          <h5>Input String:</h5>
+          <input class="w-75" type="text" id="inputString" />
+          <div class="pt-3">
+            <button class="btn btn-dark" onclick="validate()">Validate</button>
+            <button class="btn btn-dark" onclick="simulate()">Simulate</button>
+            <button class="btn btn-dark" onclick="switchRegex()" id="switchBtn">
+              Switch RegEx
+            </button>
+            <button class="btn btn-light">Clear</button>
+          </div>
+        </div>
+        <div
+          class="d-flex mt-5 flex-column w-100 justify-content-center p-5 rounded border border-light"
+        >
+          <div class="d-flex w-100 border-bottom pb-4 mb-2">
+            <div class="d-flex flex-row pr-5">
+              <h5 class="center-vertical font-weight-bold">
+                Regular Expression:
+              </h5>
+              <p
+                class="ml-3 rounded highlighted center-vertical font-weight-bold"
+                id="regexLabel"
+              >
+                (b+aa+ab) (a+b)* (bb+aba+ab)* (aaa+bbb) (a+b) (a+b+ab)*
+              </p>
+            </div>
+
+            <div class="d-flex flex-row">
+              <h5 class="center-vertical font-weight-bold">Language:</h5>
+              <p
+                class="ml-3 rounded highlighted center-vertical font-weight-bold"
+                id="languageLabel"
+              >
+                [a,b]
+              </p>
+            </div>
+          </div>
+          <div class="w-100 h-100 diagram">
+            <svg
+              width="100%"
+              height="50vh"
+              viewBox="0 0 780 360"
+              preserveAspectRatio="xMidYMid meet"
+              xmlns="http://www.w2.org/2000/svg"
+            >
+              <defs>
+                <marker
+                  id="arrow"
+                  markerWidth="10"
+                  markerHeight="10"
+                  refX="21"
+                  refY="3"
+                  orient="auto"
+                  markerUnits="strokeWidth"
+                >
+                  <path d="M0,0 L0,6 L9,3 z" class="arrow" />
+                </marker>
+                <marker
+                  id="arrow2"
+                  markerWidth="20"
+                  markerHeight="20"
+                  refX="8.5"
+                  refY="3.5"
+                  orient="auto"
+                  markerUnits="strokeWidth"
+                >
+                  <path d="M0,0 L0,6 L9,3 z" class="arrow" />
+                </marker>
+              </defs>
+              <g id="regexDiagram1">
+                <!-- q0 to q1 transition -->
+                <g>
+                  <line x1="50" y1="50%" x2="150" y2="20%" class="line" />
+                  <text
+                    class="line-text"
+                    x="88"
+                    y="33%"
+                    alignment-baseline="middle"
+                  >
+                    a
+                  </text>
+                </g>
+                <!-- q0 to q1 transition -->
+                <!-- q0 to q2 transition -->
+                <g>
+                  <line x1="50" y1="50%" x2="250" y2="50%" class="line" />
+                  <text
+                    class="line-text"
+                    x="150"
+                    y="47%"
+                    alignment-baseline="middle"
+                  >
+                    b
+                  </text>
+                </g>
+                <!-- q0 to q2 transition -->
+                <!-- q1 to q2 transition -->
+                <g>
+                  <line x1="150" y1="20%" x2="250" y2="50%" class="line" />
+                  <text
+                    class="line-text"
+                    x="212"
+                    y="33%"
+                    alignment-baseline="middle"
+                  >
+                    a,b
+                  </text>
+                </g>
+                <!-- q1 to q2 transition -->
+                <!-- q2 to q3 transition -->
+                <g>
+                  <line x1="250" y1="50%" x2="350" y2="20%" class="line" />
+                  <text
+                    class="line-text"
+                    x="288"
+                    y="33%"
+                    alignment-baseline="middle"
+                  >
+                    b
+                  </text>
+                </g>
+                <!-- q2 to q3 transition -->
+                <!-- q3 to q4 transition -->
+                <g>
+                  <line x1="350" y1="20%" x2="475" y2="20%" class="line" />
+                  <text
+                    class="line-text"
+                    x="412.5"
+                    y="17%"
+                    alignment-baseline="middle"
+                  >
+                    b
+                  </text>
+                </g>
+                <!-- q3 to q4 transition -->
+                <!-- q4 to q7 transition -->
+                <g>
+                  <line x1="475" y1="20%" x2="575" y2="50%" class="line" />
+                  <text
+                    class="line-text"
+                    x="537"
+                    y="33%"
+                    alignment-baseline="middle"
+                  >
+                    b
+                  </text>
+                </g>
+                <!-- q4 to q7 transition -->
+                <!-- q2 to q5 transition -->
+                <g>
+                  <line x1="250" y1="50%" x2="350" y2="80%" class="line" />
+                  <text
+                    class="line-text"
+                    x="288"
+                    y="68%"
+                    alignment-baseline="middle"
+                  >
+                    a
+                  </text>
+                </g>
+                <!-- q2 to q5 transition -->
+                <!-- q5 to q6 transition -->
+                <g>
+                  <line x1="350" y1="80%" x2="475" y2="80%" class="line" />
+                  <text
+                    class="line-text"
+                    x="412.5"
+                    y="77%"
+                    alignment-baseline="middle"
+                  >
+                    a
+                  </text>
+                </g>
+                <!-- q5 to q6 transition -->
+                <!-- q5 to q2 transition -->
+                <g>
+                  <path
+                    d="M 350 290 A 90 90 0 0 0 275 180"
+                    class="line-curved"
+                    marker-end="url(#arrow2)"
+                  />
+
+                  <text
+                    class="line-text"
+                    x="350"
+                    y="62%"
+                    alignment-baseline="middle"
+                  >
+                    b
+                  </text>
+                </g>
+                <!-- q5 to q2 transition -->
+                <!-- q6 to q2 transition -->
+                <g>
+                  <path
+                    d="M 475 290 A 250 250 0 0 0 275 180"
+                    class="line-curved"
+                    marker-end="url(#arrow2)"
+                  />
+
+                  <text
+                    class="line-text"
+                    x="435"
+                    y="62%"
+                    alignment-baseline="middle"
+                  >
+                    b
+                  </text>
+                </g>
+                <!-- q5 to q2 transition -->
+                <!-- q4 to q2 transition -->
+                <g>
+                  <path
+                    d="M 475 72 A 250 250 0 0 1 275 180"
+                    class="line-curved"
+                    marker-end="url(#arrow2)"
+                  />
+
+                  <text
+                    class="line-text"
+                    x="410"
+                    y="42%"
+                    alignment-baseline="middle"
+                  >
+                    a
+                  </text>
+                </g>
+                <!-- q4 to q2 transition -->
+                <!-- q6 to q7 transition -->
+                <g>
+                  <line x1="475" y1="80%" x2="575" y2="50%" class="line" />
+                  <text
+                    class="line-text"
+                    x="537"
+                    y="68%"
+                    alignment-baseline="middle"
+                  >
+                    a
+                  </text>
+                </g>
+                <!-- q6 to q7 transition -->
+                <!-- q7 to q8 transition -->
+                <g>
+                  <line x1="575" y1="50%" x2="700" y2="50%" class="line" />
+                  <text
+                    class="line-text"
+                    x="637"
+                    y="47%"
+                    alignment-baseline="middle"
+                  >
+                    a,b
+                  </text>
+                </g>
+                <!-- q7 to q8 transition -->
+                <!-- q8 to q8 transition -->
+                <g>
+                  <path
+                    d="M 725 180 l 10 -10 A 1 1 0 0 0 710 150 l -5 5"
+                    class="line-curved"
+                    marker-end="url(#arrow2)"
+                  />
+
+                  <text
+                    class="line-text"
+                    x="740"
+                    y="38%"
+                    alignment-baseline="middle"
+                  >
+                    a,b
+                  </text>
+                </g>
+                <!-- q8 to q8 transition -->
+                <!-- q0 circle -->
+                <g class="hover">
+                  <circle r="25" cx="50" cy="50%" />
+                  <text x="50" y="50%" dy=".25em" dx="-.1em">q0</text>
+                </g>
+                <!-- q0 circle -->
+                <!-- q1 circle -->
+                <g class="hover">
+                  <circle r="25" cx="150" cy="20%" />
+                  <text x="150" y="20%" dy=".25em" dx="-.1em">q1</text>
+                </g>
+                <!-- q1 circle -->
+                <!-- q2 circle -->
+                <g class="hover">
+                  <circle r="25" cx="250" cy="50%" />
+                  <text x="250" y="50%" dy=".25em" dx="-.1em">q2</text>
+                </g>
+                <!-- q2 circle -->
+                <!-- q3 circle -->
+                <g class="hover">
+                  <circle r="25" cx="350" cy="20%" />
+                  <text x="350" y="20%" dy=".25em" dx="-.1em">q3</text>
+                </g>
+                <!-- q3 circle -->
+                <!-- q4 circle -->
+                <g class="hover">
+                  <circle r="25" cx="475" cy="20%" />
+                  <text x="475" y="20%" dy=".25em" dx="-.1em">q4</text>
+                </g>
+                <!-- q4 circle -->
+                <!-- q5 circle -->
+                <g class="hover">
+                  <circle r="25" cx="350" cy="80%" />
+                  <text x="350" y="80%" dy=".25em" dx="-.1em">q5</text>
+                </g>
+                <!-- q5 circle -->
+                <!-- q6 circle -->
+                <g class="hover">
+                  <circle r="25" cx="475" cy="80%" />
+                  <text x="475" y="80%" dy=".25em" dx="-.1em">q6</text>
+                </g>
+                <!-- q6 circle -->
+                <!-- q7 circle -->
+                <g class="hover">
+                  <circle r="25" cx="575" cy="50%" />
+                  <text x="575" y="50%" dy=".25em" dx="-.1em">q7</text>
+                </g>
+                <!-- q7 circle -->
+                <!-- q8 circle -->
+                <g class="hover">
+                  <circle r="25" cx="700" cy="50%" />
+                  <text x="700" y="50%" dy=".25em" dx="-.1em">q8</text>
+                </g>
+                <!-- q8 circle -->
+              </g>
+              <g id="regexDiagram2" class="d-none">
+                <!-- w0 to w1 transition -->
+                <g>
+                  <line x1="50" y1="50%" x2="150" y2="30%" class="line" />
+                  <text
+                    class="line-text"
+                    x="88"
+                    y="38%"
+                    alignment-baseline="middle"
+                  >
+                    0
+                  </text>
+                </g>
+                <!-- w0 to w1 transition -->
+                <!-- w1 to w2 transition -->
+                <g>
+                  <line x1="150" y1="30%" x2="250" y2="10%" class="line" />
+                  <text
+                    class="line-text"
+                    x="188"
+                    y="18%"
+                    alignment-baseline="middle"
+                  >
+                    1
+                  </text>
+                </g>
+                <!-- w1 to w2 transition -->
+                <!-- w1 to w5 transition -->
+                <g>
+                  <line x1="150" y1="30%" x2="350" y2="50%" class="line" />
+                  <text
+                    class="line-text"
+                    x="250"
+                    y="37%"
+                    alignment-baseline="middle"
+                  >
+                    0
+                  </text>
+                </g>
+                <!-- w1 to w5 transition -->
+                <!-- w0 to w3 transition -->
+                <g>
+                  <line x1="50" y1="50%" x2="150" y2="70%" class="line" />
+                  <text
+                    class="line-text"
+                    x="88"
+                    y="63%"
+                    alignment-baseline="middle"
+                  >
+                    1
+                  </text>
+                </g>
+                <!-- w0 to w3 transition -->
+                <!-- w3 to w4 transition -->
+                <g>
+                  <line x1="150" y1="70%" x2="250" y2="90%" class="line" />
+                  <text
+                    class="line-text"
+                    x="188"
+                    y="83%"
+                    alignment-baseline="middle"
+                  >
+                    0
+                  </text>
+                </g>
+                <!-- w3 to w4 transition -->
+                <!-- w3 to w5 transition -->
+                <g>
+                  <line x1="150" y1="70%" x2="350" y2="50%" class="line" />
+                  <text
+                    class="line-text"
+                    x="250"
+                    y="63%"
+                    alignment-baseline="middle"
+                  >
+                    1
+                  </text>
+                </g>
+                <!-- w3 to w5 transition -->
+                <!-- w2 to w5 transition -->
+                <g>
+                  <line x1="250" y1="10%" x2="350" y2="50%" class="line" />
+                  <text
+                    class="line-text"
+                    x="310"
+                    y="25%"
+                    alignment-baseline="middle"
+                  >
+                    0
+                  </text>
+                </g>
+                <!-- w2 to w5 transition -->
+                <!-- w2 to w0 transition -->
+                <g>
+                  <path
+                    d="M 250 30 A 180 180 0 0 0 50 155"
+                    class="line-curved"
+                    marker-end="url(#arrow2)"
+                  />
+
+                  <text
+                    class="line-text"
+                    x="110"
+                    y="12%"
+                    alignment-baseline="middle"
+                  >
+                    1
+                  </text>
+                </g>
+                <!-- w2 to w0 transition -->
+                <!-- w2 to w0 transition -->
+                <g>
+                  <path
+                    d="M 250 324 A 180 180 0 0 1 50 205"
+                    class="line-curved"
+                    marker-end="url(#arrow2)"
+                  />
+
+                  <text
+                    class="line-text"
+                    x="110"
+                    y="88%"
+                    alignment-baseline="middle"
+                  >
+                    0
+                  </text>
+                </g>
+                <!-- w2 to w0 transition -->
+                <!-- w4 to w5 transition -->
+                <g>
+                  <line x1="250" y1="90%" x2="350" y2="50%" class="line" />
+                  <text
+                    class="line-text"
+                    x="310"
+                    y="75%"
+                    alignment-baseline="middle"
+                  >
+                    1
+                  </text>
+                </g>
+                <!-- w4 to w5 transition -->
+                <!-- w4 to w5 transition -->
+                <g>
+                  <line x1="250" y1="90%" x2="350" y2="50%" class="line" />
+                  <text
+                    class="line-text"
+                    x="310"
+                    y="75%"
+                    alignment-baseline="middle"
+                  >
+                    1
+                  </text>
+                </g>
+                <!-- w4 to w5 transition -->
+                <!-- w5 to w6 transition -->
+                <g>
+                  <line x1="350" y1="50%" x2="475" y2="30%" class="line" />
+                  <text
+                    class="line-text"
+                    x="400"
+                    y="37%"
+                    alignment-baseline="middle"
+                  >
+                    1
+                  </text>
+                </g>
+                <!-- w5 to w6 transition -->
+                <!-- w5 to w7 transition -->
+                <g>
+                  <line x1="350" y1="50%" x2="475" y2="70%" class="line" />
+                  <text
+                    class="line-text"
+                    x="400"
+                    y="63%"
+                    alignment-baseline="middle"
+                  >
+                    0
+                  </text>
+                </g>
+                <!-- w5 to w7 transition -->
+                <!-- w6 to w8 transition -->
+                <g>
+                  <line x1="450" y1="30%" x2="600" y2="50%" class="line" />
+                  <text
+                    class="line-text"
+                    x="530"
+                    y="37%"
+                    alignment-baseline="middle"
+                  >
+                    1
+                  </text>
+                </g>
+                <!-- w6 to w8 transition -->
+                <!-- w6 to w5 transition -->
+                <g>
+                  <path
+                    d="M 475 108 A 85 85 0 0 0 350 155"
+                    class="line-curved"
+                    marker-end="url(#arrow2)"
+                  />
+
+                  <text
+                    class="line-text"
+                    x="390"
+                    y="25%"
+                    alignment-baseline="middle"
+                  >
+                    0
+                  </text>
+                </g>
+                <!-- w6 to w5 transition -->
+                <!-- w7 to w5 transition -->
+                <g>
+                  <path
+                    d="M 475 252 A 85 85 0 0 1 350 205"
+                    class="line-curved"
+                    marker-end="url(#arrow2)"
+                  />
+
+                  <text
+                    class="line-text"
+                    x="390"
+                    y="75%"
+                    alignment-baseline="middle"
+                  >
+                    1
+                  </text>
+                </g>
+                <!-- w7 to w5 transition -->
+                <!-- w7 to w8 transition -->
+                <g>
+                  <line x1="450" y1="70%" x2="600" y2="50%" class="line" />
+                  <text
+                    class="line-text"
+                    x="530"
+                    y="63%"
+                    alignment-baseline="middle"
+                  >
+                    0
+                  </text>
+                </g>
+                <!-- w7 to w8 transition -->
+                <!-- w8 to w9 transition -->
+                <g>
+                  <line x1="600" y1="50%" x2="700" y2="50%" class="line" />
+                  <text
+                    class="line-text"
+                    x="650"
+                    y="45%"
+                    alignment-baseline="middle"
+                  >
+                    1,0
+                  </text>
+                </g>
+                <!-- w8 to w9 transition -->
+                <!-- w9 to w9 transition -->
+                <g>
+                  <path
+                    d="M 725 180 l 10 -10 A 1 1 0 0 0 710 150 l -5 5"
+                    class="line-curved"
+                    marker-end="url(#arrow2)"
+                  />
+
+                  <text
+                    class="line-text"
+                    x="740"
+                    y="38%"
+                    alignment-baseline="middle"
+                  >
+                    1,0
+                  </text>
+                </g>
+                <!-- w9 to w9 transition -->
+
+                <!-- w0 circle -->
+                <g class="hover">
+                  <circle r="25" cx="50" cy="50%" />
+                  <text x="50" y="50%" dy=".25em" dx="-.1em">w0</text>
+                </g>
+                <!-- w0 circle -->
+                <!-- w1 circle -->
+                <g class="hover">
+                  <circle r="25" cx="150" cy="30%" />
+                  <text x="150" y="30%" dy=".25em" dx="-.1em">w1</text>
+                </g>
+                <!-- w1 circle -->
+                <!-- w2 circle -->
+                <g class="hover">
+                  <circle r="25" cx="250" cy="10%" />
+                  <text x="250" y="10%" dy=".25em" dx="-.1em">w2</text>
+                </g>
+                <!-- w2 circle -->
+                <!-- w3 circle -->
+                <g class="hover">
+                  <circle r="25" cx="150" cy="70%" />
+                  <text x="150" y="70%" dy=".25em" dx="-.1em">w3</text>
+                </g>
+                <!-- w3 circle -->
+                <!-- w4 circle -->
+                <g class="hover">
+                  <circle r="25" cx="250" cy="90%" />
+                  <text x="250" y="90%" dy=".25em" dx="-.1em">w4</text>
+                </g>
+                <!-- w4 circle -->
+                <!-- w5 circle -->
+                <g class="hover">
+                  <circle r="25" cx="350" cy="50%" />
+                  <text x="350" y="50%" dy=".25em" dx="-.1em">w5</text>
+                </g>
+                <!-- w5 circle -->
+                <!-- w6 circle -->
+                <g class="hover">
+                  <circle r="25" cx="475" cy="30%" />
+                  <text x="475" y="30%" dy=".25em" dx="-.1em">w6</text>
+                </g>
+                <!-- w6 circle -->
+                <!-- w7 circle -->
+                <g class="hover">
+                  <circle r="25" cx="475" cy="70%" />
+                  <text x="475" y="70%" dy=".25em" dx="-.1em">w7</text>
+                </g>
+                <!-- w7 circle -->
+                <!-- w8 circle -->
+                <g class="hover">
+                  <circle r="25" cx="600" cy="50%" />
+                  <text x="600" y="50%" dy=".25em" dx="-.1em">w8</text>
+                </g>
+                <!-- w8 circle -->
+                <!-- w9 circle -->
+                <g class="hover">
+                  <circle r="25" cx="700" cy="50%" />
+                  <text x="700" y="50%" dy=".25em" dx="-.1em">w9</text>
+                </g>
+                <!-- w9 circle -->
+              </g>
+            </svg>
+          </div>
         </div>
       </div>
       <div
-        class="d-flex mt-5 flex-column w-75 justify-content-center p-5 rounded border border-light"
+        id="content2"
+        class="d-flex align-items-center flex-column justify-content-center"
       >
-        <div class="d-flex w-100 border-bottom pb-4 mb-2">
-          <div class="d-flex flex-row pr-5">
-            <h5 class="center-vertical font-weight-bold">
-              Regular Expression:
-            </h5>
-            <p
-              class="ml-3 rounded highlighted center-vertical font-weight-bold"
-              id="regexLabel"
-            >
-              (b+aa+ab) (a+b)* (bb+aba+ab)* (aaa+bbb) (a+b) (a+b+ab)*
-            </p>
-          </div>
-
-          <div class="d-flex flex-row">
-            <h5 class="center-vertical font-weight-bold">Language:</h5>
-            <p
-              class="ml-3 rounded highlighted center-vertical font-weight-bold"
-              id="languageLabel"
-            >
-              [a,b]
-            </p>
-          </div>
-        </div>
-        <div class="w-100 h-100 diagram">
-          <svg
-            width="100%"
-            height="50vh"
-            viewBox="0 0 780 360"
-            preserveAspectRatio="xMidYMid meet"
-            xmlns="http://www.w2.org/2000/svg"
-          >
-            <defs>
-              <marker
-                id="arrow"
-                markerWidth="10"
-                markerHeight="10"
-                refX="21"
-                refY="3"
-                orient="auto"
-                markerUnits="strokeWidth"
-              >
-                <path d="M0,0 L0,6 L9,3 z" class="arrow" />
-              </marker>
-              <marker
-                id="arrow2"
-                markerWidth="20"
-                markerHeight="20"
-                refX="8.5"
-                refY="3.5"
-                orient="auto"
-                markerUnits="strokeWidth"
-              >
-                <path d="M0,0 L0,6 L9,3 z" class="arrow" />
-              </marker>
-            </defs>
-            <g id="regexDiagram1">
-              <!-- q0 to q1 transition -->
-              <g>
-                <line x1="50" y1="50%" x2="150" y2="20%" class="line" />
-                <text
-                  class="line-text"
-                  x="88"
-                  y="33%"
-                  alignment-baseline="middle"
-                >
-                  a
-                </text>
-              </g>
-              <!-- q0 to q1 transition -->
-              <!-- q0 to q2 transition -->
-              <g>
-                <line x1="50" y1="50%" x2="250" y2="50%" class="line" />
-                <text
-                  class="line-text"
-                  x="150"
-                  y="47%"
-                  alignment-baseline="middle"
-                >
-                  b
-                </text>
-              </g>
-              <!-- q0 to q2 transition -->
-              <!-- q1 to q2 transition -->
-              <g>
-                <line x1="150" y1="20%" x2="250" y2="50%" class="line" />
-                <text
-                  class="line-text"
-                  x="212"
-                  y="33%"
-                  alignment-baseline="middle"
-                >
-                  a,b
-                </text>
-              </g>
-              <!-- q1 to q2 transition -->
-              <!-- q2 to q3 transition -->
-              <g>
-                <line x1="250" y1="50%" x2="350" y2="20%" class="line" />
-                <text
-                  class="line-text"
-                  x="288"
-                  y="33%"
-                  alignment-baseline="middle"
-                >
-                  b
-                </text>
-              </g>
-              <!-- q2 to q3 transition -->
-              <!-- q3 to q4 transition -->
-              <g>
-                <line x1="350" y1="20%" x2="475" y2="20%" class="line" />
-                <text
-                  class="line-text"
-                  x="412.5"
-                  y="17%"
-                  alignment-baseline="middle"
-                >
-                  b
-                </text>
-              </g>
-              <!-- q3 to q4 transition -->
-              <!-- q4 to q7 transition -->
-              <g>
-                <line x1="475" y1="20%" x2="575" y2="50%" class="line" />
-                <text
-                  class="line-text"
-                  x="537"
-                  y="33%"
-                  alignment-baseline="middle"
-                >
-                  b
-                </text>
-              </g>
-              <!-- q4 to q7 transition -->
-              <!-- q2 to q5 transition -->
-              <g>
-                <line x1="250" y1="50%" x2="350" y2="80%" class="line" />
-                <text
-                  class="line-text"
-                  x="288"
-                  y="68%"
-                  alignment-baseline="middle"
-                >
-                  a
-                </text>
-              </g>
-              <!-- q2 to q5 transition -->
-              <!-- q5 to q6 transition -->
-              <g>
-                <line x1="350" y1="80%" x2="475" y2="80%" class="line" />
-                <text
-                  class="line-text"
-                  x="412.5"
-                  y="77%"
-                  alignment-baseline="middle"
-                >
-                  a
-                </text>
-              </g>
-              <!-- q5 to q6 transition -->
-              <!-- q5 to q2 transition -->
-              <g>
-                <path
-                  d="M 350 290 A 90 90 0 0 0 275 180"
-                  class="line-curved"
-                  marker-end="url(#arrow2)"
-                />
-
-                <text
-                  class="line-text"
-                  x="350"
-                  y="62%"
-                  alignment-baseline="middle"
-                >
-                  b
-                </text>
-              </g>
-              <!-- q5 to q2 transition -->
-              <!-- q6 to q2 transition -->
-              <g>
-                <path
-                  d="M 475 290 A 250 250 0 0 0 275 180"
-                  class="line-curved"
-                  marker-end="url(#arrow2)"
-                />
-
-                <text
-                  class="line-text"
-                  x="435"
-                  y="62%"
-                  alignment-baseline="middle"
-                >
-                  b
-                </text>
-              </g>
-              <!-- q5 to q2 transition -->
-              <!-- q4 to q2 transition -->
-              <g>
-                <path
-                  d="M 475 72 A 250 250 0 0 1 275 180"
-                  class="line-curved"
-                  marker-end="url(#arrow2)"
-                />
-
-                <text
-                  class="line-text"
-                  x="410"
-                  y="42%"
-                  alignment-baseline="middle"
-                >
-                  a
-                </text>
-              </g>
-              <!-- q4 to q2 transition -->
-              <!-- q6 to q7 transition -->
-              <g>
-                <line x1="475" y1="80%" x2="575" y2="50%" class="line" />
-                <text
-                  class="line-text"
-                  x="537"
-                  y="68%"
-                  alignment-baseline="middle"
-                >
-                  a
-                </text>
-              </g>
-              <!-- q6 to q7 transition -->
-              <!-- q7 to q8 transition -->
-              <g>
-                <line x1="575" y1="50%" x2="700" y2="50%" class="line" />
-                <text
-                  class="line-text"
-                  x="637"
-                  y="47%"
-                  alignment-baseline="middle"
-                >
-                  a,b
-                </text>
-              </g>
-              <!-- q7 to q8 transition -->
-              <!-- q8 to q8 transition -->
-              <g>
-                <path
-                  d="M 725 180 l 10 -10 A 1 1 0 0 0 710 150 l -5 5"
-                  class="line-curved"
-                  marker-end="url(#arrow2)"
-                />
-
-                <text
-                  class="line-text"
-                  x="740"
-                  y="38%"
-                  alignment-baseline="middle"
-                >
-                  a,b
-                </text>
-              </g>
-              <!-- q8 to q8 transition -->
-              <!-- q0 circle -->
-              <g class="hover">
-                <circle r="25" cx="50" cy="50%" />
-                <text x="50" y="50%" dy=".25em" dx="-.1em">q0</text>
-              </g>
-              <!-- q0 circle -->
-              <!-- q1 circle -->
-              <g class="hover">
-                <circle r="25" cx="150" cy="20%" />
-                <text x="150" y="20%" dy=".25em" dx="-.1em">q1</text>
-              </g>
-              <!-- q1 circle -->
-              <!-- q2 circle -->
-              <g class="hover">
-                <circle r="25" cx="250" cy="50%" />
-                <text x="250" y="50%" dy=".25em" dx="-.1em">q2</text>
-              </g>
-              <!-- q2 circle -->
-              <!-- q3 circle -->
-              <g class="hover">
-                <circle r="25" cx="350" cy="20%" />
-                <text x="350" y="20%" dy=".25em" dx="-.1em">q3</text>
-              </g>
-              <!-- q3 circle -->
-              <!-- q4 circle -->
-              <g class="hover">
-                <circle r="25" cx="475" cy="20%" />
-                <text x="475" y="20%" dy=".25em" dx="-.1em">q4</text>
-              </g>
-              <!-- q4 circle -->
-              <!-- q5 circle -->
-              <g class="hover">
-                <circle r="25" cx="350" cy="80%" />
-                <text x="350" y="80%" dy=".25em" dx="-.1em">q5</text>
-              </g>
-              <!-- q5 circle -->
-              <!-- q6 circle -->
-              <g class="hover">
-                <circle r="25" cx="475" cy="80%" />
-                <text x="475" y="80%" dy=".25em" dx="-.1em">q6</text>
-              </g>
-              <!-- q6 circle -->
-              <!-- q7 circle -->
-              <g class="hover">
-                <circle r="25" cx="575" cy="50%" />
-                <text x="575" y="50%" dy=".25em" dx="-.1em">q7</text>
-              </g>
-              <!-- q7 circle -->
-              <!-- q8 circle -->
-              <g class="hover">
-                <circle r="25" cx="700" cy="50%" />
-                <text x="700" y="50%" dy=".25em" dx="-.1em">q8</text>
-              </g>
-              <!-- q8 circle -->
-            </g>
-            <g id="regexDiagram2" class="d-none">
-              <!-- w0 to w1 transition -->
-              <g>
-                <line x1="50" y1="50%" x2="150" y2="30%" class="line" />
-                <text
-                  class="line-text"
-                  x="88"
-                  y="38%"
-                  alignment-baseline="middle"
-                >
-                  0
-                </text>
-              </g>
-              <!-- w0 to w1 transition -->
-              <!-- w1 to w2 transition -->
-              <g>
-                <line x1="150" y1="30%" x2="250" y2="10%" class="line" />
-                <text
-                  class="line-text"
-                  x="188"
-                  y="18%"
-                  alignment-baseline="middle"
-                >
-                  1
-                </text>
-              </g>
-              <!-- w1 to w2 transition -->
-              <!-- w1 to w5 transition -->
-              <g>
-                <line x1="150" y1="30%" x2="350" y2="50%" class="line" />
-                <text
-                  class="line-text"
-                  x="250"
-                  y="37%"
-                  alignment-baseline="middle"
-                >
-                  0
-                </text>
-              </g>
-              <!-- w1 to w5 transition -->
-              <!-- w0 to w3 transition -->
-              <g>
-                <line x1="50" y1="50%" x2="150" y2="70%" class="line" />
-                <text
-                  class="line-text"
-                  x="88"
-                  y="63%"
-                  alignment-baseline="middle"
-                >
-                  1
-                </text>
-              </g>
-              <!-- w0 to w3 transition -->
-              <!-- w3 to w4 transition -->
-              <g>
-                <line x1="150" y1="70%" x2="250" y2="90%" class="line" />
-                <text
-                  class="line-text"
-                  x="188"
-                  y="83%"
-                  alignment-baseline="middle"
-                >
-                  0
-                </text>
-              </g>
-              <!-- w3 to w4 transition -->
-              <!-- w3 to w5 transition -->
-              <g>
-                <line x1="150" y1="70%" x2="350" y2="50%" class="line" />
-                <text
-                  class="line-text"
-                  x="250"
-                  y="63%"
-                  alignment-baseline="middle"
-                >
-                  1
-                </text>
-              </g>
-              <!-- w3 to w5 transition -->
-              <!-- w2 to w5 transition -->
-              <g>
-                <line x1="250" y1="10%" x2="350" y2="50%" class="line" />
-                <text
-                  class="line-text"
-                  x="310"
-                  y="25%"
-                  alignment-baseline="middle"
-                >
-                  0
-                </text>
-              </g>
-              <!-- w2 to w5 transition -->
-              <!-- w2 to w0 transition -->
-              <g>
-                <path
-                  d="M 250 30 A 180 180 0 0 0 50 155"
-                  class="line-curved"
-                  marker-end="url(#arrow2)"
-                />
-
-                <text
-                  class="line-text"
-                  x="110"
-                  y="12%"
-                  alignment-baseline="middle"
-                >
-                  1
-                </text>
-              </g>
-              <!-- w2 to w0 transition -->
-              <!-- w2 to w0 transition -->
-              <g>
-                <path
-                  d="M 250 324 A 180 180 0 0 1 50 205"
-                  class="line-curved"
-                  marker-end="url(#arrow2)"
-                />
-
-                <text
-                  class="line-text"
-                  x="110"
-                  y="88%"
-                  alignment-baseline="middle"
-                >
-                  0
-                </text>
-              </g>
-              <!-- w2 to w0 transition -->
-              <!-- w4 to w5 transition -->
-              <g>
-                <line x1="250" y1="90%" x2="350" y2="50%" class="line" />
-                <text
-                  class="line-text"
-                  x="310"
-                  y="75%"
-                  alignment-baseline="middle"
-                >
-                  1
-                </text>
-              </g>
-              <!-- w4 to w5 transition -->
-              <!-- w4 to w5 transition -->
-              <g>
-                <line x1="250" y1="90%" x2="350" y2="50%" class="line" />
-                <text
-                  class="line-text"
-                  x="310"
-                  y="75%"
-                  alignment-baseline="middle"
-                >
-                  1
-                </text>
-              </g>
-              <!-- w4 to w5 transition -->
-              <!-- w5 to w6 transition -->
-              <g>
-                <line x1="350" y1="50%" x2="475" y2="30%" class="line" />
-                <text
-                  class="line-text"
-                  x="400"
-                  y="37%"
-                  alignment-baseline="middle"
-                >
-                  1
-                </text>
-              </g>
-              <!-- w5 to w6 transition -->
-              <!-- w5 to w7 transition -->
-              <g>
-                <line x1="350" y1="50%" x2="475" y2="70%" class="line" />
-                <text
-                  class="line-text"
-                  x="400"
-                  y="63%"
-                  alignment-baseline="middle"
-                >
-                  0
-                </text>
-              </g>
-              <!-- w5 to w7 transition -->
-              <!-- w6 to w8 transition -->
-              <g>
-                <line x1="450" y1="30%" x2="600" y2="50%" class="line" />
-                <text
-                  class="line-text"
-                  x="530"
-                  y="37%"
-                  alignment-baseline="middle"
-                >
-                  1
-                </text>
-              </g>
-              <!-- w6 to w8 transition -->
-              <!-- w6 to w5 transition -->
-              <g>
-                <path
-                  d="M 475 108 A 85 85 0 0 0 350 155"
-                  class="line-curved"
-                  marker-end="url(#arrow2)"
-                />
-
-                <text
-                  class="line-text"
-                  x="390"
-                  y="25%"
-                  alignment-baseline="middle"
-                >
-                  0
-                </text>
-              </g>
-              <!-- w6 to w5 transition -->
-              <!-- w7 to w5 transition -->
-              <g>
-                <path
-                  d="M 475 252 A 85 85 0 0 1 350 205"
-                  class="line-curved"
-                  marker-end="url(#arrow2)"
-                />
-
-                <text
-                  class="line-text"
-                  x="390"
-                  y="75%"
-                  alignment-baseline="middle"
-                >
-                  1
-                </text>
-              </g>
-              <!-- w7 to w5 transition -->
-              <!-- w7 to w8 transition -->
-              <g>
-                <line x1="450" y1="70%" x2="600" y2="50%" class="line" />
-                <text
-                  class="line-text"
-                  x="530"
-                  y="63%"
-                  alignment-baseline="middle"
-                >
-                  0
-                </text>
-              </g>
-              <!-- w7 to w8 transition -->
-              <!-- w8 to w9 transition -->
-              <g>
-                <line x1="600" y1="50%" x2="700" y2="50%" class="line" />
-                <text
-                  class="line-text"
-                  x="650"
-                  y="45%"
-                  alignment-baseline="middle"
-                >
-                  1,0
-                </text>
-              </g>
-              <!-- w8 to w9 transition -->
-              <!-- w9 to w9 transition -->
-              <g>
-                <path
-                  d="M 725 180 l 10 -10 A 1 1 0 0 0 710 150 l -5 5"
-                  class="line-curved"
-                  marker-end="url(#arrow2)"
-                />
-
-                <text
-                  class="line-text"
-                  x="740"
-                  y="38%"
-                  alignment-baseline="middle"
-                >
-                  1,0
-                </text>
-              </g>
-              <!-- w9 to w9 transition -->
-
-              <!-- w0 circle -->
-              <g class="hover">
-                <circle r="25" cx="50" cy="50%" />
-                <text x="50" y="50%" dy=".25em" dx="-.1em">w0</text>
-              </g>
-              <!-- w0 circle -->
-              <!-- w1 circle -->
-              <g class="hover">
-                <circle r="25" cx="150" cy="30%" />
-                <text x="150" y="30%" dy=".25em" dx="-.1em">w1</text>
-              </g>
-              <!-- w1 circle -->
-              <!-- w2 circle -->
-              <g class="hover">
-                <circle r="25" cx="250" cy="10%" />
-                <text x="250" y="10%" dy=".25em" dx="-.1em">w2</text>
-              </g>
-              <!-- w2 circle -->
-              <!-- w3 circle -->
-              <g class="hover">
-                <circle r="25" cx="150" cy="70%" />
-                <text x="150" y="70%" dy=".25em" dx="-.1em">w3</text>
-              </g>
-              <!-- w3 circle -->
-              <!-- w4 circle -->
-              <g class="hover">
-                <circle r="25" cx="250" cy="90%" />
-                <text x="250" y="90%" dy=".25em" dx="-.1em">w4</text>
-              </g>
-              <!-- w4 circle -->
-              <!-- w5 circle -->
-              <g class="hover">
-                <circle r="25" cx="350" cy="50%" />
-                <text x="350" y="50%" dy=".25em" dx="-.1em">w5</text>
-              </g>
-              <!-- w5 circle -->
-              <!-- w6 circle -->
-              <g class="hover">
-                <circle r="25" cx="475" cy="30%" />
-                <text x="475" y="30%" dy=".25em" dx="-.1em">w6</text>
-              </g>
-              <!-- w6 circle -->
-              <!-- w7 circle -->
-              <g class="hover">
-                <circle r="25" cx="475" cy="70%" />
-                <text x="475" y="70%" dy=".25em" dx="-.1em">w7</text>
-              </g>
-              <!-- w7 circle -->
-              <!-- w8 circle -->
-              <g class="hover">
-                <circle r="25" cx="600" cy="50%" />
-                <text x="600" y="50%" dy=".25em" dx="-.1em">w8</text>
-              </g>
-              <!-- w8 circle -->
-              <!-- w9 circle -->
-              <g class="hover">
-                <circle r="25" cx="700" cy="50%" />
-                <text x="700" y="50%" dy=".25em" dx="-.1em">w9</text>
-              </g>
-              <!-- w9 circle -->
-            </g>
-          </svg>
+        <div
+          class="d-flex flex-column w-100 justify-content-center p-5 rounded border border-light"
+        >
+          <h1 class="xl pb-4 font-weight-bold">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit
+            accusantium molestias rerum, nesciunt fuga repellendus voluptatibus
+            eos eaque quidem quos illo iure asperiores! Itaque ipsum
+            necessitatibus, explicabo deserunt minima doloribus?
+          </h1>
         </div>
       </div>
     </div>

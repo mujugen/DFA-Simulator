@@ -79,3 +79,26 @@ circle {
   stroke-width: 2;
   fill: rgb(248, 254, 255);
 }
+.contentParent {
+  flex-direction: row !important;
+  max-height: 100vh;
+}
+@media (max-width: 1280px) {
+  .contentParent {
+    flex-direction: column !important;
+    max-height: fit-content;
+  }
+  #content1 {
+    flex: 1;
+  }
+  #content2 {
+    flex: 1;
+    padding: 3rem !important;
+  }
+}
+#content1 {
+  flex: 3;
+}
+#content2 {
+  flex: 1;
+}
