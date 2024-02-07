@@ -24,11 +24,14 @@ body {
 }
 
 .hover {
-  transition: transform 0.3s ease-in-out;
+  transition: all 0.15s ease-in;
+
+  transform-origin: center;
+  transform-box: fill-box;
 }
 
 .hover:hover {
-  /*  transform: scale(1.2); */
+  transform: scale(1.2);
 }
 
 .border-light {
