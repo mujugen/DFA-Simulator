@@ -54,6 +54,7 @@ input[type="text"] {
   stroke: #2d3748;
   stroke-width: 2;
   marker-end: url(#arrow2);
+  fill: none;
 }
 
 .arrow {
