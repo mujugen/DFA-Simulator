@@ -29,3 +29,7 @@ function simulate() {
 function validate() {
   console.log("validate");
 }
+
+window.onload = function () {
+  switchRegex();
+};
