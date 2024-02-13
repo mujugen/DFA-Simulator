@@ -79,6 +79,11 @@ circle {
   stroke-width: 2;
   fill: rgb(248, 254, 255);
 }
+rect {
+  stroke: #0062ff;
+  stroke-width: 3;
+  fill: rgb(248, 254, 255);
+}
 .contentParent {
   height: 100vh !important;
   max-width: 100vw;
@@ -95,6 +100,14 @@ circle {
   #content2 {
     flex: 1;
   }
+  #pdaDiagramsvg {
+    height: 60vh !important;
+  }
+}
+@media (min-width: 1280px) {
+  #content2 {
+    padding-left: 0 !important;
+  }
 }
 #content1 {
   flex: 2;
@@ -102,7 +115,7 @@ circle {
 }
 #content2 {
   flex: 1;
-  padding-left: 0 !important;
+  width: 100% !important;
 }
 
 #content2-top {
@@ -112,3 +125,10 @@ circle {
 #content2-bottom {
   flex: 2;
 }
+#pdaDiagramsvg {
+  height: 38vh;
+}
+
+/* .xl {
+  font-size: 2vh;
+} */

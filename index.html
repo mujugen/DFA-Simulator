@@ -59,7 +59,7 @@
             </div>
 
             <div class="d-flex flex-row">
-              <h5 class="center-vertical font-weight-bold">Language:</h5>
+              <h5 class="center-vertical font-weight-bold">Alphabet:</h5>
               <p
                 class="ml-3 rounded highlighted center-vertical font-weight-bold"
                 id="languageLabel"
@@ -708,12 +708,12 @@
           class="d-flex flex-column w-100 mb-5 justify-content-center p-5 rounded border border-light"
         >
           <h1 class="xl pb-4 font-weight-bold">CFG</h1>
-          <h2 class="xl pb-4 font-weight-bold" id="cfg1">
+          <h4 class="pb-4 font-weight-bold" id="cfg1">
             S -> ABCDEF<br />A -> b | aa | ab<br />B -> aB | bB | ε<br />C ->
             bbC | abaC | abC | ε<br />D -> aaa | bbb<br />E -> a | b<br />F ->
             aF | bF | ε
-          </h2>
-          <h2 class="xl pb-4 font-weight-bold d-none" id="cfg2">
+          </h4>
+          <h4 class="pb-4 font-weight-bold d-none" id="cfg2">
             S -> ABCDEFG<br />
             A -> 1A | 0A | ε<br />
             B -> 11 | 00 | 101 | 010<br />
@@ -722,22 +722,23 @@
             E -> 11E | 00E | 101E | ε<br />
             F -> 1 | 0<br />
             G -> 1G | 0G | ε
-          </h2>
+          </h4>
         </div>
         <div
           id="content2-bottom"
           class="h-100 w-100 p-5 rounded border border-light"
         >
-          <h1 class="xl pb-4 font-weight-bold">PDA</h1>
+          <h1 class="xl font-weight-bold">PDA</h1>
           <div
             class="d-flex flex-row align-items-center w-100 h-100 diagram justify-content-center"
           >
             <svg
+              id="pdaDiagramsvg"
               width="100%"
-              height="20vh"
-              viewBox="0 0 500 300"
+              viewBox="0 0 600 850"
               preserveAspectRatio="xMidYMid meet"
               xmlns="http://www.w2.org/2000/svg"
+              style="margin-left: -10%"
             >
               <defs>
                 <marker
@@ -764,63 +765,237 @@
                 </marker>
               </defs>
               <g id="pdaDiagram1">
-                <!-- q0 to q1 transition -->
-                <g>
-                  <line x1="50" y1="50%" x2="150" y2="20%" class="line" />
+                <!-- estart node -->
+                <g class="hover">
+                  <rect
+                    width="150"
+                    height="50"
+                    x="240"
+                    y="25"
+                    rx="20"
+                    ry="20"
+                  />
                   <text
-                    class="line-text"
-                    x="88"
-                    y="33%"
+                    x="52%"
+                    y="50"
+                    class="font-weight-bold"
+                    text-anchor="middle"
                     alignment-baseline="middle"
                   >
-                    a
+                    Start
                   </text>
                 </g>
-                <!-- q0 to q1 transition -->
-                <!-- q0 to q2 transition -->
-                <g>
-                  <line x1="50" y1="50%" x2="250" y2="50%" class="line" />
+                <!-- estart node -->
+                <!-- eread1 node -->
+                <g class="hover">
+                  <rect
+                    width="70"
+                    height="70"
+                    x="280"
+                    y="150"
+                    style="transform-origin: center; transform-box: fill-box"
+                    transform="rotate(45)"
+                  />
                   <text
-                    class="line-text"
-                    x="150"
-                    y="47%"
+                    x="315"
+                    y="183"
+                    class="font-weight-bold"
+                    text-anchor="middle"
                     alignment-baseline="middle"
                   >
-                    b
+                    Read 1
                   </text>
                 </g>
-                <!-- q0 to q2 transition -->
-                <!-- q1 to q2 transition -->
-                <g>
-                  <line x1="150" y1="20%" x2="250" y2="50%" class="line" />
+                <!-- eread1 node -->
+                <!-- eread2 node -->
+                <g class="hover">
+                  <rect
+                    width="70"
+                    height="70"
+                    x="100"
+                    y="150"
+                    style="transform-origin: center; transform-box: fill-box"
+                    transform="rotate(45)"
+                  />
                   <text
-                    class="line-text"
-                    x="212"
-                    y="33%"
+                    x="135"
+                    y="183"
+                    class="font-weight-bold"
+                    text-anchor="middle"
                     alignment-baseline="middle"
                   >
-                    a,b
+                    Read 2
                   </text>
                 </g>
-                <!-- q1 to q2 transition -->
-                <!-- q0 circle -->
+                <!-- eread2 node -->
+                <!-- eread3 node -->
                 <g class="hover">
-                  <circle r="25" cx="50" cy="50%" />
-                  <text x="50" y="50%" dy=".25em" dx="-.1em">q0</text>
+                  <rect
+                    width="70"
+                    height="70"
+                    x="460"
+                    y="150"
+                    style="transform-origin: center; transform-box: fill-box"
+                    transform="rotate(45)"
+                  />
+                  <text
+                    x="495"
+                    y="183"
+                    class="font-weight-bold"
+                    text-anchor="middle"
+                    alignment-baseline="middle"
+                  >
+                    Read 3
+                  </text>
                 </g>
-                <!-- q0 circle -->
-                <!-- q1 circle -->
+                <!-- eread3 node -->
+                <!-- eread4 node -->
                 <g class="hover">
-                  <circle r="25" cx="150" cy="20%" />
-                  <text x="150" y="20%" dy=".25em" dx="-.1em">q1</text>
+                  <rect
+                    width="70"
+                    height="70"
+                    x="100"
+                    y="300"
+                    style="transform-origin: center; transform-box: fill-box"
+                    transform="rotate(45)"
+                  />
+                  <text
+                    x="135"
+                    y="333"
+                    class="font-weight-bold"
+                    text-anchor="middle"
+                    alignment-baseline="middle"
+                  >
+                    Read 4
+                  </text>
                 </g>
-                <!-- q1 circle -->
-                <!-- q2 circle -->
+                <!-- eread4 node -->
+                <!-- eread5 node -->
                 <g class="hover">
-                  <circle r="25" cx="250" cy="50%" />
-                  <text x="250" y="50%" dy=".25em" dx="-.1em">q2</text>
+                  <rect
+                    width="70"
+                    height="70"
+                    x="100"
+                    y="450"
+                    style="transform-origin: center; transform-box: fill-box"
+                    transform="rotate(45)"
+                  />
+                  <text
+                    x="135"
+                    y="483"
+                    class="font-weight-bold"
+                    text-anchor="middle"
+                    alignment-baseline="middle"
+                  >
+                    Read 5
+                  </text>
                 </g>
-                <!-- q2 circle -->
+                <!-- eread5 node -->
+                <!-- eread6 node -->
+                <g class="hover">
+                  <rect
+                    width="70"
+                    height="70"
+                    x="100"
+                    y="600"
+                    style="transform-origin: center; transform-box: fill-box"
+                    transform="rotate(45)"
+                  />
+                  <text
+                    x="135"
+                    y="633"
+                    class="font-weight-bold"
+                    text-anchor="middle"
+                    alignment-baseline="middle"
+                  >
+                    Read 6
+                  </text>
+                </g>
+                <!-- eread6 node -->
+                <!-- eread7 node -->
+                <g class="hover">
+                  <rect
+                    width="70"
+                    height="70"
+                    x="460"
+                    y="450"
+                    style="transform-origin: center; transform-box: fill-box"
+                    transform="rotate(45)"
+                  />
+                  <text
+                    x="495"
+                    y="483"
+                    class="font-weight-bold"
+                    text-anchor="middle"
+                    alignment-baseline="middle"
+                  >
+                    Read 7
+                  </text>
+                </g>
+                <!-- eread7 node -->
+                <!-- eread8 node -->
+                <g class="hover">
+                  <rect
+                    width="70"
+                    height="70"
+                    x="460"
+                    y="600"
+                    style="transform-origin: center; transform-box: fill-box"
+                    transform="rotate(45)"
+                  />
+                  <text
+                    x="495"
+                    y="633"
+                    class="font-weight-bold"
+                    text-anchor="middle"
+                    alignment-baseline="middle"
+                  >
+                    Read 8
+                  </text>
+                </g>
+                <!-- eread8 node -->
+                <!-- eread9 node -->
+                <g class="hover">
+                  <rect
+                    width="70"
+                    height="70"
+                    x="280"
+                    y="600"
+                    style="transform-origin: center; transform-box: fill-box"
+                    transform="rotate(45)"
+                  />
+                  <text
+                    x="315"
+                    y="633"
+                    class="font-weight-bold"
+                    text-anchor="middle"
+                    alignment-baseline="middle"
+                  >
+                    Read 9
+                  </text>
+                </g>
+                <!-- eread9 node -->
+                <!-- eaccept node -->
+                <g class="hover">
+                  <rect
+                    width="150"
+                    height="50"
+                    x="240"
+                    y="750"
+                    rx="20"
+                    ry="20"
+                  />
+                  <text
+                    x="52%"
+                    y="775"
+                    class="font-weight-bold"
+                    text-anchor="middle"
+                    alignment-baseline="middle"
+                  >
+                    Accept
+                  </text>
+                </g>
+                <!-- eaccept node -->
               </g>
             </svg>
           </div>
