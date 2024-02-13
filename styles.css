@@ -101,7 +101,7 @@ rect {
     flex: 1;
   }
   #pdaDiagramsvg {
-    height: 60vh !important;
+    height: 50vh !important;
   }
 }
 @media (min-width: 1280px) {
@@ -118,17 +118,17 @@ rect {
   width: 100% !important;
 }
 
-#content2-top {
-  flex: 1;
-}
-
 #content2-bottom {
   flex: 2;
 }
 #pdaDiagramsvg {
-  height: 38vh;
+  height: 100%;
 }
 
-/* .xl {
-  font-size: 2vh;
-} */
+.xl {
+  font-size: 3vh;
+}
+
+.l {
+  font-size: 1.9vh;
+}

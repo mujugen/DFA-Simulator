@@ -26,22 +26,52 @@
         id="content1"
         class="d-flex align-items-center flex-column justify-content-center p-5 h-100"
       >
-        <div
-          class="d-flex flex-column w-100 h-100 justify-content-center p-5 rounded border border-light"
-          style="height: fit-content !important"
-        >
-          <h1 class="xl pb-4 font-weight-bold">DFA Simulator</h1>
-          <h5>Input String:</h5>
-          <input class="w-75" type="text" id="inputString" />
-          <div class="pt-3">
-            <button class="btn btn-dark" onclick="validate()">Validate</button>
-            <button class="btn btn-dark" onclick="simulate()">Simulate</button>
-            <button class="btn btn-dark" onclick="switchRegex()" id="switchBtn">
-              Switch Problem
-            </button>
-            <button class="btn btn-light">Clear</button>
+        <div class="d-flex flex-row w-100">
+          <div
+            class="d-flex flex-column w-100 h-100 justify-content-center p-5 rounded border border-light"
+          >
+            <h1 class="xl pb-4 font-weight-bold">DFA Simulator</h1>
+            <h5>Input String:</h5>
+            <input class="w-75" type="text" id="inputString" />
+            <div class="pt-3">
+              <button class="btn btn-dark" onclick="validate()">
+                Validate
+              </button>
+              <button class="btn btn-dark" onclick="simulate()">
+                Simulate
+              </button>
+              <button
+                class="btn btn-dark"
+                onclick="switchRegex()"
+                id="switchBtn"
+              >
+                Switch Problem
+              </button>
+              <button class="btn btn-light">Clear</button>
+            </div>
+          </div>
+          <div
+            class="d-flex flex-column justify-content-center p-5 ml-5 w-100 rounded border border-light"
+          >
+            <h1 class="xl pb-3 font-weight-bold mb-0">CFG</h1>
+            <h4 class="l font-weight-bold pb-0" id="cfg1">
+              S -> ABCDEF<br />A -> b | aa | ab<br />B -> aB | bB | ε<br />C ->
+              bbC | abaC | abC | ε<br />D -> aaa | bbb<br />E -> a | b<br />F ->
+              aF | bF | ε
+            </h4>
+            <h4 class="l font-weight-bold d-none pb0-" id="cfg2">
+              S -> ABCDEFG<br />
+              A -> 1A | 0A | ε<br />
+              B -> 11 | 00 | 101 | 010<br />
+              C -> 1C | 0C | 11C | 00C | 101C | ε<br />
+              D -> 11 | 00<br />
+              E -> 11E | 00E | 101E | ε<br />
+              F -> 1 | 0<br />
+              G -> 1G | 0G | ε
+            </h4>
           </div>
         </div>
+
         <div
           class="d-flex mt-5 flex-column h-100 w-100 justify-content-center p-5 rounded border border-light"
         >
@@ -704,27 +734,6 @@
         class="d-flex h-100 p-5 align-items-center flex-column justify-content-center"
       >
         <div
-          id="content2-top"
-          class="d-flex flex-column w-100 mb-5 justify-content-center p-5 rounded border border-light"
-        >
-          <h1 class="xl pb-4 font-weight-bold">CFG</h1>
-          <h4 class="pb-4 font-weight-bold" id="cfg1">
-            S -> ABCDEF<br />A -> b | aa | ab<br />B -> aB | bB | ε<br />C ->
-            bbC | abaC | abC | ε<br />D -> aaa | bbb<br />E -> a | b<br />F ->
-            aF | bF | ε
-          </h4>
-          <h4 class="pb-4 font-weight-bold d-none" id="cfg2">
-            S -> ABCDEFG<br />
-            A -> 1A | 0A | ε<br />
-            B -> 11 | 00 | 101 | 010<br />
-            C -> 1C | 0C | 11C | 00C | 101C | ε<br />
-            D -> 11 | 00<br />
-            E -> 11E | 00E | 101E | ε<br />
-            F -> 1 | 0<br />
-            G -> 1G | 0G | ε
-          </h4>
-        </div>
-        <div
           id="content2-bottom"
           class="h-100 w-100 p-5 rounded border border-light"
         >
@@ -738,7 +747,6 @@
               viewBox="0 0 600 850"
               preserveAspectRatio="xMidYMid meet"
               xmlns="http://www.w2.org/2000/svg"
-              style="margin-left: -10%"
             >
               <defs>
                 <marker
