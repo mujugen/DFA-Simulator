@@ -7,6 +7,8 @@ function switchRegex() {
   let languageLabel = document.getElementById("languageLabel");
   let regexDiagram1 = document.getElementById("regexDiagram1");
   let regexDiagram2 = document.getElementById("regexDiagram2");
+  let pdaDiagram1 = document.getElementById("pdaDiagram1");
+  let pdaDiagram2 = document.getElementById("pdaDiagram2");
   let cfg1 = document.getElementById("cfg1");
   let cfg2 = document.getElementById("cfg2");
 
@@ -16,6 +18,8 @@ function switchRegex() {
     currentRegex = 1;
     regexDiagram1.classList.remove("d-none");
     regexDiagram2.classList.add("d-none");
+    pdaDiagram1.classList.remove("d-none");
+    pdaDiagram2.classList.add("d-none");
     cfg1.classList.remove("d-none");
     cfg2.classList.add("d-none");
   } else {
@@ -24,6 +28,8 @@ function switchRegex() {
     currentRegex = 2;
     regexDiagram1.classList.add("d-none");
     regexDiagram2.classList.remove("d-none");
+    pdaDiagram1.classList.add("d-none");
+    pdaDiagram2.classList.remove("d-none");
     cfg1.classList.add("d-none");
     cfg2.classList.remove("d-none");
   }
