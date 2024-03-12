@@ -118,12 +118,14 @@ var nodes = {
   },
 };
 
+let input_display = document.getElementById("input-display");
+let simulateBtn = document.getElementById("simulateBtn");
+
 async function simulate() {
   let input_string = document.getElementById("inputString").value;
   console.log(input_string);
   let nextNode, transition, currentNode;
   currentNode = currentRegex == 1 ? "q0" : "w0";
-  let input_display = document.getElementById("input-display");
   input_display.innerHTML = input_string;
   input_display.classList.remove("red");
   input_display.classList.remove("blue");
@@ -142,7 +144,7 @@ async function simulate() {
     await sleep(500);
     currentNode = nextNode;
   }
-  let simulateBtn = document.getElementById("simulateBtn");
+
   simulateBtn.disabled = true;
 }
 
@@ -151,11 +153,10 @@ function validate() {
   console.log(input_string);
   let nextNode, transition, currentNode;
   currentNode = currentRegex == 1 ? "q0" : "w0";
-  let input_display = document.getElementById("input-display");
   input_display.innerHTML = input_string;
   input_display.classList.remove("red");
   input_display.classList.remove("blue");
-  let simulateBtn = document.getElementById("simulateBtn");
+
   for (i = 0; i < input_string.length; i++) {
     if (currentRegex == 1) {
       if (input_string[i] !== "a" && input_string[i] !== "b") {
@@ -202,7 +203,7 @@ function validate() {
 
 window.onload = function () {
   switchRegex();
-  let simulateBtn = document.getElementById("simulateBtn");
+
   simulateBtn.disabled = true;
 };
 
@@ -212,4 +213,12 @@ function sleep(milliseconds) {
       resolve();
     }, milliseconds); // 1000 milliseconds = 1 second
   });
+}
+
+function clearInput() {
+  document.getElementById("inputString").value = "";
+  input_display.classList.remove("blue");
+  input_display.classList.remove("red");
+  input_display.innerHTML = "";
+  simulateBtn.disabled = true;
 }
