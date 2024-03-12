@@ -74,6 +74,48 @@ var nodes = {
       b: "q8",
     },
   },
+  2: {
+    w0: {
+      0: "w1",
+      1: "w3",
+    },
+    w1: {
+      0: "w5",
+      1: "w2",
+    },
+    w2: {
+      0: "w5",
+      1: "w5",
+    },
+    w3: {
+      0: "w4",
+      1: "w5",
+    },
+    w4: {
+      0: "w5",
+      1: "w5",
+    },
+    w5: {
+      0: "w7",
+      1: "w6",
+    },
+    w6: {
+      0: "w7",
+      1: "w8",
+    },
+    w7: {
+      0: "w8",
+      1: "w6",
+    },
+    w8: {
+      0: "w9",
+      1: "w9",
+    },
+    w9: {
+      0: "w9",
+      1: "w9",
+    },
+  },
 };
 
 async function simulate() {
@@ -135,7 +177,7 @@ function validate() {
 }
 
 window.onload = function () {
-  //switchRegex();
+  switchRegex();
 };
 
 function sleep(milliseconds) {
