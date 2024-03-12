@@ -12,6 +12,11 @@ body {
   font-size: 1.2rem !important;
 }
 
+.big {
+  color: #0062ff !important;
+  font-size: 2rem !important;
+}
+
 .center-vertical {
   margin-top: auto;
   margin-bottom: auto;
@@ -180,8 +185,12 @@ rect {
 }
 
 #input-display {
-  min-height: 2rem;
+  min-height: 3rem;
   max-width: 40vw;
   padding-left: 1rem;
   padding-right: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 1.2px;
 }

@@ -126,10 +126,19 @@ async function simulate() {
   console.log(input_string);
   let nextNode, transition, currentNode;
   currentNode = currentRegex == 1 ? "q0" : "w0";
-  input_display.innerHTML = input_string;
+  let input_display = document.getElementById("input-display");
   input_display.classList.remove("red");
   input_display.classList.remove("blue");
-  for (i = 0; i < input_string.length; i++) {
+  input_display.innerHTML = "";
+
+  // Insert <span> elements around each letter in the input display
+  for (let i = 0; i < input_string.length; i++) {
+    let spanElement = document.createElement("span");
+    spanElement.textContent = input_string[i];
+    input_display.appendChild(spanElement);
+  }
+
+  for (let i = 0; i < input_string.length; i++) {
     nextNode = nodes[currentRegex][currentNode][input_string[i]];
     transition = `${currentNode}${nextNode}`;
     let transitionElement = document.getElementById(transition);
@@ -137,10 +146,19 @@ async function simulate() {
     circleElement.classList.add("transition");
     circleElement.classList.add("hovered");
     transitionElement.classList.add("transition");
+
+    // Highlight the current letter using span element
+    let spanElement = input_display.children[i];
+    spanElement.classList.add("big");
+
     await sleep(1000);
     circleElement.classList.remove("transition");
     circleElement.classList.remove("hovered");
     transitionElement.classList.remove("transition");
+
+    // Remove highlighting after delay
+    spanElement.classList.remove("big");
+
     await sleep(500);
     currentNode = nextNode;
   }
