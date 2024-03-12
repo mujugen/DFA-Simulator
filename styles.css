@@ -66,6 +66,11 @@ path.transition {
 }
 .blue {
   fill: #0062ff !important;
+  color: #0062ff !important;
+}
+.red {
+  fill: #ff1100 !important;
+  color: #ff1100 !important;
 }
 
 .border-light {
@@ -172,4 +177,11 @@ rect {
 
 .l {
   font-size: 1.9vh;
+}
+
+#input-display {
+  min-height: 2rem;
+  max-width: 40vw;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }

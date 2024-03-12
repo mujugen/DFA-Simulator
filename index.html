@@ -37,7 +37,11 @@
               <button class="btn btn-dark" onclick="validate()">
                 Validate
               </button>
-              <button class="btn btn-dark" onclick="simulate()">
+              <button
+                id="simulateBtn"
+                class="btn btn-dark"
+                onclick="simulate()"
+              >
                 Simulate
               </button>
               <button
@@ -48,6 +52,12 @@
                 Switch Problem
               </button>
               <button class="btn btn-light">Clear</button>
+            </div>
+            <div>
+              <h2
+                id="input-display"
+                class="mt-3 rounded highlighted center-vertical font-weight-bold text-center overflow-hidden transition-delay"
+              ></h2>
             </div>
           </div>
           <div

@@ -123,6 +123,10 @@ async function simulate() {
   console.log(input_string);
   let nextNode, transition, currentNode;
   currentNode = currentRegex == 1 ? "q0" : "w0";
+  let input_display = document.getElementById("input-display");
+  input_display.innerHTML = input_string;
+  input_display.classList.remove("red");
+  input_display.classList.remove("blue");
   for (i = 0; i < input_string.length; i++) {
     nextNode = nodes[currentRegex][currentNode][input_string[i]];
     transition = `${currentNode}${nextNode}`;
@@ -138,6 +142,8 @@ async function simulate() {
     await sleep(500);
     currentNode = nextNode;
   }
+  let simulateBtn = document.getElementById("simulateBtn");
+  simulateBtn.disabled = true;
 }
 
 function validate() {
@@ -145,15 +151,24 @@ function validate() {
   console.log(input_string);
   let nextNode, transition, currentNode;
   currentNode = currentRegex == 1 ? "q0" : "w0";
+  let input_display = document.getElementById("input-display");
+  input_display.innerHTML = input_string;
+  input_display.classList.remove("red");
+  input_display.classList.remove("blue");
+  let simulateBtn = document.getElementById("simulateBtn");
   for (i = 0; i < input_string.length; i++) {
     if (currentRegex == 1) {
       if (input_string[i] !== "a" && input_string[i] !== "b") {
         console.log("invalid");
+        input_display.classList.add("red");
+        simulateBtn.disabled = true;
         return;
       }
     } else {
       if (input_string[i] !== "0" && input_string[i] !== "1") {
         console.log("invalid");
+        input_display.classList.add("red");
+        simulateBtn.disabled = true;
         return;
       }
     }
@@ -164,20 +179,31 @@ function validate() {
   if (currentRegex == 1) {
     if (currentNode == "q8") {
       console.log("valid");
+      input_display.classList.add("blue");
+      simulateBtn.disabled = false;
     } else {
       console.log("invalid");
+      input_display.classList.add("red");
+      simulateBtn.disabled = true;
     }
   } else {
     if (currentNode == "w9") {
       console.log("valid");
+      input_display.classList.add("blue");
+
+      simulateBtn.disabled = false;
     } else {
       console.log("invalid");
+      input_display.classList.add("red");
+      simulateBtn.disabled = true;
     }
   }
 }
 
 window.onload = function () {
   switchRegex();
+  let simulateBtn = document.getElementById("simulateBtn");
+  simulateBtn.disabled = true;
 };
 
 function sleep(milliseconds) {
