@@ -35,9 +35,66 @@ function switchRegex() {
   }
 }
 
-function simulate() {
-  console.log("simulate");
+var nodes = {
+  q0: {
+    a: "q1",
+    b: "q2",
+  },
+  q1: {
+    a: "q2",
+    b: "q2",
+  },
+  q2: {
+    a: "q5",
+    b: "q3",
+  },
+  q3: {
+    a: "q2",
+    b: "q4",
+  },
+  q4: {
+    a: "q2",
+    b: "q7",
+  },
+  q5: {
+    a: "q6",
+    b: "q2",
+  },
+  q6: {
+    a: "q7",
+    b: "q2",
+  },
+  q7: {
+    a: "q8",
+    b: "q8",
+  },
+  q8: {
+    a: "q8",
+    b: "q8",
+  },
+};
+
+async function simulate() {
+  let input_string = "aabbabaaaaba";
+  let currentNode = "q0";
+  let nextNode, transition;
+  for (i = 0; i < input_string.length; i++) {
+    nextNode = nodes[currentNode][input_string[i]];
+    transition = `${currentNode}${nextNode}`;
+    let transitionElement = document.getElementById(transition);
+    let circleElement = document.getElementById(nextNode);
+    circleElement.classList.add("transition");
+    circleElement.classList.add("hovered");
+    transitionElement.classList.add("transition");
+    await sleep(1000);
+    circleElement.classList.remove("transition");
+    circleElement.classList.remove("hovered");
+    transitionElement.classList.remove("transition");
+    await sleep(500);
+    currentNode = nextNode;
+  }
 }
+
 function validate() {
   console.log("validate");
 }
@@ -45,3 +102,11 @@ function validate() {
 window.onload = function () {
   //switchRegex();
 };
+
+function sleep(milliseconds) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve();
+    }, milliseconds); // 1000 milliseconds = 1 second
+  });
+}

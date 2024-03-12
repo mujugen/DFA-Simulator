@@ -142,11 +142,40 @@
                 >
                   <path d="M0,0 L0,6 L9,3 z" class="arrow" />
                 </marker>
+                <marker
+                  id="arrowBlue"
+                  markerWidth="10"
+                  markerHeight="10"
+                  refX="21"
+                  refY="3"
+                  orient="auto"
+                  markerUnits="strokeWidth"
+                >
+                  <path d="M0,0 L0,6 L9,3 z" class="transition-delay blue" />
+                </marker>
+                <marker
+                  id="arrowBlue2"
+                  markerWidth="20"
+                  markerHeight="20"
+                  refX="8.5"
+                  refY="3.5"
+                  orient="auto"
+                  markerUnits="strokeWidth"
+                >
+                  <path d="M0,0 L0,6 L9,3 z" class="transition-delay blue" />
+                </marker>
               </defs>
               <g id="regexDiagram1">
                 <!-- q0 to q1 transition -->
                 <g>
-                  <line x1="50" y1="50%" x2="150" y2="20%" class="line" />
+                  <line
+                    id="q0q1"
+                    x1="50"
+                    y1="50%"
+                    x2="150"
+                    y2="20%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="88"
@@ -159,7 +188,14 @@
                 <!-- q0 to q1 transition -->
                 <!-- q0 to q2 transition -->
                 <g>
-                  <line x1="50" y1="50%" x2="250" y2="50%" class="line" />
+                  <line
+                    id="q0q2"
+                    x1="50"
+                    y1="50%"
+                    x2="250"
+                    y2="50%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="150"
@@ -172,7 +208,14 @@
                 <!-- q0 to q2 transition -->
                 <!-- q1 to q2 transition -->
                 <g>
-                  <line x1="150" y1="20%" x2="250" y2="50%" class="line" />
+                  <line
+                    id="q1q2"
+                    x1="150"
+                    y1="20%"
+                    x2="250"
+                    y2="50%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="212"
@@ -185,7 +228,14 @@
                 <!-- q1 to q2 transition -->
                 <!-- q2 to q3 transition -->
                 <g>
-                  <line x1="250" y1="50%" x2="350" y2="20%" class="line" />
+                  <line
+                    id="q2q3"
+                    x1="250"
+                    y1="50%"
+                    x2="350"
+                    y2="20%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="288"
@@ -198,7 +248,14 @@
                 <!-- q2 to q3 transition -->
                 <!-- q3 to q4 transition -->
                 <g>
-                  <line x1="350" y1="20%" x2="475" y2="20%" class="line" />
+                  <line
+                    id="q3q4"
+                    x1="350"
+                    y1="20%"
+                    x2="475"
+                    y2="20%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="412.5"
@@ -211,7 +268,14 @@
                 <!-- q3 to q4 transition -->
                 <!-- q4 to q7 transition -->
                 <g>
-                  <line x1="475" y1="20%" x2="575" y2="50%" class="line" />
+                  <line
+                    id="q4q7"
+                    x1="475"
+                    y1="20%"
+                    x2="575"
+                    y2="50%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="537"
@@ -224,7 +288,14 @@
                 <!-- q4 to q7 transition -->
                 <!-- q2 to q5 transition -->
                 <g>
-                  <line x1="250" y1="50%" x2="350" y2="80%" class="line" />
+                  <line
+                    id="q2q5"
+                    x1="250"
+                    y1="50%"
+                    x2="350"
+                    y2="80%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="288"
@@ -237,7 +308,14 @@
                 <!-- q2 to q5 transition -->
                 <!-- q5 to q6 transition -->
                 <g>
-                  <line x1="350" y1="80%" x2="475" y2="80%" class="line" />
+                  <line
+                    id="q5q6"
+                    x1="350"
+                    y1="80%"
+                    x2="475"
+                    y2="80%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="412.5"
@@ -251,9 +329,9 @@
                 <!-- q5 to q2 transition -->
                 <g>
                   <path
+                    id="q5q2"
                     d="M 350 290 A 90 90 0 0 0 273 178"
-                    class="line-curved"
-                    marker-end="url(#arrow2)"
+                    class="line-curved transition-delay"
                   />
 
                   <text
@@ -269,9 +347,9 @@
                 <!-- q6 to q2 transition -->
                 <g>
                   <path
+                    id="q6q2"
                     d="M 475 290 A 250 250 0 0 0 273 178"
-                    class="line-curved"
-                    marker-end="url(#arrow2)"
+                    class="line-curved transition-delay"
                   />
 
                   <text
@@ -287,9 +365,9 @@
                 <!-- q4 to q2 transition -->
                 <g>
                   <path
+                    id="q4q2"
                     d="M 475 72 A 250 250 0 0 1 273 178"
-                    class="line-curved"
-                    marker-end="url(#arrow2)"
+                    class="line-curved transition-delay"
                   />
 
                   <text
@@ -305,9 +383,9 @@
                 <!-- q3 to q2 transition -->
                 <g>
                   <path
+                    id="q3q2"
                     d="M 350 72 A 90 90 0 0 1 273 178"
-                    class="line-curved"
-                    marker-end="url(#arrow2)"
+                    class="line-curved transition-delay"
                   />
 
                   <text
@@ -322,7 +400,14 @@
                 <!-- q3 to q2 transition -->
                 <!-- q6 to q7 transition -->
                 <g>
-                  <line x1="475" y1="80%" x2="575" y2="50%" class="line" />
+                  <line
+                    id="q6q7"
+                    x1="475"
+                    y1="80%"
+                    x2="575"
+                    y2="50%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="537"
@@ -335,7 +420,14 @@
                 <!-- q6 to q7 transition -->
                 <!-- q7 to q8 transition -->
                 <g>
-                  <line x1="575" y1="50%" x2="700" y2="50%" class="line" />
+                  <line
+                    id="q7q8"
+                    x1="575"
+                    y1="50%"
+                    x2="700"
+                    y2="50%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="637"
@@ -349,9 +441,9 @@
                 <!-- q8 to q8 transition -->
                 <g>
                   <path
+                    id="q8q8"
                     d="M 725 180 l 10 -10 A 1 1 0 0 0 710 150 l -5 5"
-                    class="line-curved"
-                    marker-end="url(#arrow2)"
+                    class="line-curved transition-delay"
                   />
 
                   <text
@@ -365,7 +457,7 @@
                 </g>
                 <!-- q8 to q8 transition -->
                 <!-- q0 circle -->
-                <g class="hover">
+                <g id="q0" class="hover">
                   <circle r="25" cx="50" cy="50%" />
                   <text
                     x="50"
@@ -379,49 +471,49 @@
                 </g>
                 <!-- q0 circle -->
                 <!-- q1 circle -->
-                <g class="hover">
+                <g id="q1" class="hover">
                   <circle r="25" cx="150" cy="20%" />
                   <text x="150" y="20%" dy=".25em" dx="-.1em">q1</text>
                 </g>
                 <!-- q1 circle -->
                 <!-- q2 circle -->
-                <g class="hover">
+                <g id="q2" class="hover">
                   <circle r="25" cx="250" cy="50%" />
                   <text x="250" y="50%" dy=".25em" dx="-.1em">q2</text>
                 </g>
                 <!-- q2 circle -->
                 <!-- q3 circle -->
-                <g class="hover">
+                <g id="q3" class="hover">
                   <circle r="25" cx="350" cy="20%" />
                   <text x="350" y="20%" dy=".25em" dx="-.1em">q3</text>
                 </g>
                 <!-- q3 circle -->
                 <!-- q4 circle -->
-                <g class="hover">
+                <g id="q4" class="hover">
                   <circle r="25" cx="475" cy="20%" />
                   <text x="475" y="20%" dy=".25em" dx="-.1em">q4</text>
                 </g>
                 <!-- q4 circle -->
                 <!-- q5 circle -->
-                <g class="hover">
+                <g id="q5" class="hover">
                   <circle r="25" cx="350" cy="80%" />
                   <text x="350" y="80%" dy=".25em" dx="-.1em">q5</text>
                 </g>
                 <!-- q5 circle -->
                 <!-- q6 circle -->
-                <g class="hover">
+                <g id="q6" class="hover">
                   <circle r="25" cx="475" cy="80%" />
                   <text x="475" y="80%" dy=".25em" dx="-.1em">q6</text>
                 </g>
                 <!-- q6 circle -->
                 <!-- q7 circle -->
-                <g class="hover">
+                <g id="q7" class="hover">
                   <circle r="25" cx="575" cy="50%" />
                   <text x="575" y="50%" dy=".25em" dx="-.1em">q7</text>
                 </g>
                 <!-- q7 circle -->
                 <!-- q8 circle -->
-                <g class="hover">
+                <g id="q8" class="hover">
                   <circle r="25" cx="700" cy="50%" />
                   <text
                     x="700"
@@ -438,7 +530,13 @@
               <g id="regexDiagram2" class="d-none">
                 <!-- w0 to w1 transition -->
                 <g>
-                  <line x1="50" y1="50%" x2="150" y2="30%" class="line" />
+                  <line
+                    x1="50"
+                    y1="50%"
+                    x2="150"
+                    y2="30%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="88"
@@ -451,7 +549,13 @@
                 <!-- w0 to w1 transition -->
                 <!-- w1 to w2 transition -->
                 <g>
-                  <line x1="150" y1="30%" x2="250" y2="10%" class="line" />
+                  <line
+                    x1="150"
+                    y1="30%"
+                    x2="250"
+                    y2="10%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="188"
@@ -464,7 +568,13 @@
                 <!-- w1 to w2 transition -->
                 <!-- w1 to w5 transition -->
                 <g>
-                  <line x1="150" y1="30%" x2="350" y2="50%" class="line" />
+                  <line
+                    x1="150"
+                    y1="30%"
+                    x2="350"
+                    y2="50%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="250"
@@ -477,7 +587,13 @@
                 <!-- w1 to w5 transition -->
                 <!-- w0 to w3 transition -->
                 <g>
-                  <line x1="50" y1="50%" x2="150" y2="70%" class="line" />
+                  <line
+                    x1="50"
+                    y1="50%"
+                    x2="150"
+                    y2="70%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="88"
@@ -490,7 +606,13 @@
                 <!-- w0 to w3 transition -->
                 <!-- w3 to w4 transition -->
                 <g>
-                  <line x1="150" y1="70%" x2="250" y2="90%" class="line" />
+                  <line
+                    x1="150"
+                    y1="70%"
+                    x2="250"
+                    y2="90%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="188"
@@ -503,7 +625,13 @@
                 <!-- w3 to w4 transition -->
                 <!-- w3 to w5 transition -->
                 <g>
-                  <line x1="150" y1="70%" x2="350" y2="50%" class="line" />
+                  <line
+                    x1="150"
+                    y1="70%"
+                    x2="350"
+                    y2="50%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="250"
@@ -516,7 +644,13 @@
                 <!-- w3 to w5 transition -->
                 <!-- w2 to w5 transition -->
                 <g>
-                  <line x1="250" y1="10%" x2="350" y2="50%" class="line" />
+                  <line
+                    x1="250"
+                    y1="10%"
+                    x2="350"
+                    y2="50%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="310"
@@ -529,7 +663,13 @@
                 <!-- w2 to w5 transition -->
                 <!-- w4 to w5 transition -->
                 <g>
-                  <line x1="250" y1="90%" x2="350" y2="50%" class="line" />
+                  <line
+                    x1="250"
+                    y1="90%"
+                    x2="350"
+                    y2="50%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="310"
@@ -542,7 +682,13 @@
                 <!-- w4 to w5 transition -->
                 <!-- w5 to w6 transition -->
                 <g>
-                  <line x1="350" y1="50%" x2="475" y2="30%" class="line" />
+                  <line
+                    x1="350"
+                    y1="50%"
+                    x2="475"
+                    y2="30%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="400"
@@ -555,7 +701,13 @@
                 <!-- w5 to w6 transition -->
                 <!-- w5 to w7 transition -->
                 <g>
-                  <line x1="350" y1="50%" x2="475" y2="70%" class="line" />
+                  <line
+                    x1="350"
+                    y1="50%"
+                    x2="475"
+                    y2="70%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="400"
@@ -568,7 +720,13 @@
                 <!-- w5 to w7 transition -->
                 <!-- w6 to w8 transition -->
                 <g>
-                  <line x1="450" y1="30%" x2="600" y2="50%" class="line" />
+                  <line
+                    x1="450"
+                    y1="30%"
+                    x2="600"
+                    y2="50%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="530"
@@ -583,8 +741,7 @@
                 <g>
                   <path
                     d="M 475 108 A 85 85 0 0 0 465 230"
-                    class="line-curved"
-                    marker-end="url(#arrow2)"
+                    class="line-curved transition-delay"
                   />
 
                   <text
@@ -601,8 +758,7 @@
                 <g>
                   <path
                     d="M 465 252 A 85 85 0 0 0 480 130"
-                    class="line-curved"
-                    marker-end="url(#arrow2)"
+                    class="line-curved transition-delay"
                   />
 
                   <text
@@ -617,7 +773,13 @@
                 <!-- w7 to w6 transition -->
                 <!-- w7 to w8 transition -->
                 <g>
-                  <line x1="450" y1="70%" x2="600" y2="50%" class="line" />
+                  <line
+                    x1="450"
+                    y1="70%"
+                    x2="600"
+                    y2="50%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="530"
@@ -630,7 +792,13 @@
                 <!-- w7 to w8 transition -->
                 <!-- w8 to w9 transition -->
                 <g>
-                  <line x1="600" y1="50%" x2="700" y2="50%" class="line" />
+                  <line
+                    x1="600"
+                    y1="50%"
+                    x2="700"
+                    y2="50%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="650"
@@ -645,8 +813,7 @@
                 <g>
                   <path
                     d="M 725 180 l 10 -10 A 1 1 0 0 0 710 150 l -5 5"
-                    class="line-curved"
-                    marker-end="url(#arrow2)"
+                    class="line-curved transition-delay"
                   />
 
                   <text
@@ -788,7 +955,14 @@
               <g id="pdaDiagram1">
                 <!-- q0 to q1 transition -->
                 <g>
-                  <line x1="50" y1="50%" x2="150" y2="20%" class="line" />
+                  <line
+                    id="q0q1"
+                    x1="50"
+                    y1="50%"
+                    x2="150"
+                    y2="20%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="88"
@@ -801,7 +975,13 @@
                 <!-- q0 to q1 transition -->
                 <!-- q0 to q2 transition -->
                 <g>
-                  <line x1="50" y1="50%" x2="240" y2="50%" class="line" />
+                  <line
+                    x1="50"
+                    y1="50%"
+                    x2="240"
+                    y2="50%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="150"
@@ -814,7 +994,13 @@
                 <!-- q0 to q2 transition -->
                 <!-- q1 to q2 transition -->
                 <g>
-                  <line x1="150" y1="20%" x2="250" y2="50%" class="line" />
+                  <line
+                    x1="150"
+                    y1="20%"
+                    x2="250"
+                    y2="50%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="212"
@@ -827,7 +1013,13 @@
                 <!-- q1 to q2 transition -->
                 <!-- q2 to q3 transition -->
                 <g>
-                  <line x1="250" y1="50%" x2="350" y2="20%" class="line" />
+                  <line
+                    x1="250"
+                    y1="50%"
+                    x2="350"
+                    y2="20%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="288"
@@ -840,7 +1032,13 @@
                 <!-- q2 to q3 transition -->
                 <!-- q3 to q4 transition -->
                 <g>
-                  <line x1="350" y1="20%" x2="465" y2="20%" class="line" />
+                  <line
+                    x1="350"
+                    y1="20%"
+                    x2="465"
+                    y2="20%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="412.5"
@@ -853,7 +1051,13 @@
                 <!-- q3 to q4 transition -->
                 <!-- q4 to q7 transition -->
                 <g>
-                  <line x1="475" y1="20%" x2="575" y2="50%" class="line" />
+                  <line
+                    x1="475"
+                    y1="20%"
+                    x2="575"
+                    y2="50%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="537"
@@ -866,7 +1070,13 @@
                 <!-- q4 to q7 transition -->
                 <!-- q2 to q5 transition -->
                 <g>
-                  <line x1="250" y1="50%" x2="350" y2="80%" class="line" />
+                  <line
+                    x1="250"
+                    y1="50%"
+                    x2="350"
+                    y2="80%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="288"
@@ -879,7 +1089,13 @@
                 <!-- q2 to q5 transition -->
                 <!-- q5 to q6 transition -->
                 <g>
-                  <line x1="350" y1="80%" x2="465" y2="80%" class="line" />
+                  <line
+                    x1="350"
+                    y1="80%"
+                    x2="465"
+                    y2="80%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="412.5"
@@ -894,8 +1110,7 @@
                 <g>
                   <path
                     d="M 350 290 A 90 90 0 0 0 285 180"
-                    class="line-curved"
-                    marker-end="url(#arrow2)"
+                    class="line-curved transition-delay"
                   />
 
                   <text
@@ -912,8 +1127,7 @@
                 <g>
                   <path
                     d="M 475 290 A 250 250 0 0 0 285 180"
-                    class="line-curved"
-                    marker-end="url(#arrow2)"
+                    class="line-curved transition-delay"
                   />
 
                   <text
@@ -930,8 +1144,7 @@
                 <g>
                   <path
                     d="M 475 72 A 250 250 0 0 1 285 180"
-                    class="line-curved"
-                    marker-end="url(#arrow2)"
+                    class="line-curved transition-delay"
                   />
 
                   <text
@@ -946,7 +1159,13 @@
                 <!-- q4 to q2 transition -->
                 <!-- q6 to q7 transition -->
                 <g>
-                  <line x1="475" y1="80%" x2="575" y2="50%" class="line" />
+                  <line
+                    x1="475"
+                    y1="80%"
+                    x2="575"
+                    y2="50%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="537"
@@ -959,7 +1178,13 @@
                 <!-- q6 to q7 transition -->
                 <!-- q7 to q8 transition -->
                 <g>
-                  <line x1="575" y1="50%" x2="685" y2="50%" class="line" />
+                  <line
+                    x1="575"
+                    y1="50%"
+                    x2="685"
+                    y2="50%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="637"
@@ -974,8 +1199,7 @@
                 <g>
                   <path
                     d="M 725 180 l 10 -10 A 1 1 0 0 0 710 150 l -5 5"
-                    class="line-curved"
-                    marker-end="url(#arrow2)"
+                    class="line-curved transition-delay"
                   />
 
                   <text
@@ -1226,7 +1450,13 @@
               <g id="pdaDiagram2" class="d-none">
                 <!-- w0 to w1 transition -->
                 <g>
-                  <line x1="50" y1="50%" x2="150" y2="30%" class="line" />
+                  <line
+                    x1="50"
+                    y1="50%"
+                    x2="150"
+                    y2="30%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="88"
@@ -1239,7 +1469,13 @@
                 <!-- w0 to w1 transition -->
                 <!-- w1 to w2 transition -->
                 <g>
-                  <line x1="150" y1="30%" x2="250" y2="10%" class="line" />
+                  <line
+                    x1="150"
+                    y1="30%"
+                    x2="250"
+                    y2="10%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="188"
@@ -1252,7 +1488,13 @@
                 <!-- w1 to w2 transition -->
                 <!-- w1 to w5 transition -->
                 <g>
-                  <line x1="150" y1="30%" x2="350" y2="50%" class="line" />
+                  <line
+                    x1="150"
+                    y1="30%"
+                    x2="350"
+                    y2="50%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="250"
@@ -1265,7 +1507,13 @@
                 <!-- w1 to w5 transition -->
                 <!-- w0 to w3 transition -->
                 <g>
-                  <line x1="50" y1="50%" x2="150" y2="70%" class="line" />
+                  <line
+                    x1="50"
+                    y1="50%"
+                    x2="150"
+                    y2="70%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="88"
@@ -1278,7 +1526,13 @@
                 <!-- w0 to w3 transition -->
                 <!-- w3 to w4 transition -->
                 <g>
-                  <line x1="150" y1="70%" x2="250" y2="90%" class="line" />
+                  <line
+                    x1="150"
+                    y1="70%"
+                    x2="250"
+                    y2="90%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="188"
@@ -1291,7 +1545,13 @@
                 <!-- w3 to w4 transition -->
                 <!-- w3 to w5 transition -->
                 <g>
-                  <line x1="150" y1="70%" x2="350" y2="50%" class="line" />
+                  <line
+                    x1="150"
+                    y1="70%"
+                    x2="350"
+                    y2="50%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="250"
@@ -1304,7 +1564,13 @@
                 <!-- w3 to w5 transition -->
                 <!-- w2 to w5 transition -->
                 <g>
-                  <line x1="250" y1="10%" x2="350" y2="50%" class="line" />
+                  <line
+                    x1="250"
+                    y1="10%"
+                    x2="350"
+                    y2="50%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="310"
@@ -1319,8 +1585,7 @@
                 <g>
                   <path
                     d="M 250 30 A 180 180 0 0 0 50 145"
-                    class="line-curved"
-                    marker-end="url(#arrow2)"
+                    class="line-curved transition-delay"
                   />
 
                   <text
@@ -1335,7 +1600,13 @@
                 <!-- w2 to w0 transition -->
                 <!-- w4 to w5 transition -->
                 <g>
-                  <line x1="250" y1="90%" x2="350" y2="50%" class="line" />
+                  <line
+                    x1="250"
+                    y1="90%"
+                    x2="350"
+                    y2="50%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="310"
@@ -1348,7 +1619,13 @@
                 <!-- w4 to w5 transition -->
                 <!-- w5 to w6 transition -->
                 <g>
-                  <line x1="350" y1="50%" x2="475" y2="30%" class="line" />
+                  <line
+                    x1="350"
+                    y1="50%"
+                    x2="475"
+                    y2="30%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="400"
@@ -1361,7 +1638,13 @@
                 <!-- w5 to w6 transition -->
                 <!-- w5 to w7 transition -->
                 <g>
-                  <line x1="350" y1="50%" x2="475" y2="70%" class="line" />
+                  <line
+                    x1="350"
+                    y1="50%"
+                    x2="475"
+                    y2="70%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="400"
@@ -1374,7 +1657,13 @@
                 <!-- w5 to w7 transition -->
                 <!-- w6 to w8 transition -->
                 <g>
-                  <line x1="450" y1="30%" x2="600" y2="50%" class="line" />
+                  <line
+                    x1="450"
+                    y1="30%"
+                    x2="600"
+                    y2="50%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="530"
@@ -1389,8 +1678,7 @@
                 <g>
                   <path
                     d="M 475 108 A 85 85 0 0 0 350 145"
-                    class="line-curved"
-                    marker-end="url(#arrow2)"
+                    class="line-curved transition-delay"
                   />
 
                   <text
@@ -1407,8 +1695,7 @@
                 <g>
                   <path
                     d="M 475 252 A 85 85 0 0 1 350 215"
-                    class="line-curved"
-                    marker-end="url(#arrow2)"
+                    class="line-curved transition-delay"
                   />
 
                   <text
@@ -1423,7 +1710,13 @@
                 <!-- w7 to w5 transition -->
                 <!-- w7 to w8 transition -->
                 <g>
-                  <line x1="450" y1="70%" x2="600" y2="50%" class="line" />
+                  <line
+                    x1="450"
+                    y1="70%"
+                    x2="600"
+                    y2="50%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="530"
@@ -1436,7 +1729,13 @@
                 <!-- w7 to w8 transition -->
                 <!-- w8 to w9 transition -->
                 <g>
-                  <line x1="600" y1="50%" x2="685" y2="50%" class="line" />
+                  <line
+                    x1="600"
+                    y1="50%"
+                    x2="685"
+                    y2="50%"
+                    class="line transition-delay"
+                  />
                   <text
                     class="line-text"
                     x="650"
@@ -1451,8 +1750,7 @@
                 <g>
                   <path
                     d="M 725 180 l 10 -10 A 1 1 0 0 0 710 150 l -5 5"
-                    class="line-curved"
-                    marker-end="url(#arrow2)"
+                    class="line-curved transition-delay"
                   />
 
                   <text

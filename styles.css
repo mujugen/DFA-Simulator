@@ -28,13 +28,44 @@ body {
 
 .hover {
   transition: all 0.15s ease-in;
-
   transform-origin: center;
   transform-box: fill-box;
 }
 
 .hover:hover {
   transform: scale(1.2);
+}
+.hovered {
+  transform: scale(1.2);
+}
+
+.hovered > circle {
+  fill: #0062ff !important;
+}
+
+.hovered > text {
+  stroke: white !important;
+  fill: white !important;
+}
+
+.transition-delay {
+  transition: all 0.15s ease-in !important;
+}
+
+.transition {
+  stroke: #0062ff !important;
+  marker-end: url(#arrowBlue) !important;
+  z-index: 99999;
+}
+line.transition {
+  stroke: #0062ff !important;
+  stroke-width: 2.6 !important;
+}
+path.transition {
+  stroke-width: 2.6 !important;
+}
+.blue {
+  fill: #0062ff !important;
 }
 
 .border-light {
@@ -56,7 +87,7 @@ input[type="text"] {
 .line-curved {
   stroke: #2d3748;
   stroke-width: 2;
-  marker-end: url(#arrow2);
+  marker-end: url(#arrow2) !important;
   fill: none;
 }
 
