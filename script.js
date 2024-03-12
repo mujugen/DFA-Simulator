@@ -36,50 +36,53 @@ function switchRegex() {
 }
 
 var nodes = {
-  q0: {
-    a: "q1",
-    b: "q2",
-  },
-  q1: {
-    a: "q2",
-    b: "q2",
-  },
-  q2: {
-    a: "q5",
-    b: "q3",
-  },
-  q3: {
-    a: "q2",
-    b: "q4",
-  },
-  q4: {
-    a: "q2",
-    b: "q7",
-  },
-  q5: {
-    a: "q6",
-    b: "q2",
-  },
-  q6: {
-    a: "q7",
-    b: "q2",
-  },
-  q7: {
-    a: "q8",
-    b: "q8",
-  },
-  q8: {
-    a: "q8",
-    b: "q8",
+  1: {
+    q0: {
+      a: "q1",
+      b: "q2",
+    },
+    q1: {
+      a: "q2",
+      b: "q2",
+    },
+    q2: {
+      a: "q5",
+      b: "q3",
+    },
+    q3: {
+      a: "q2",
+      b: "q4",
+    },
+    q4: {
+      a: "q2",
+      b: "q7",
+    },
+    q5: {
+      a: "q6",
+      b: "q2",
+    },
+    q6: {
+      a: "q7",
+      b: "q2",
+    },
+    q7: {
+      a: "q8",
+      b: "q8",
+    },
+    q8: {
+      a: "q8",
+      b: "q8",
+    },
   },
 };
 
 async function simulate() {
-  let input_string = "aabbabaaaaba";
-  let currentNode = "q0";
-  let nextNode, transition;
+  let input_string = document.getElementById("inputString").value;
+  console.log(input_string);
+  let nextNode, transition, currentNode;
+  currentNode = currentRegex == 1 ? "q0" : "w0";
   for (i = 0; i < input_string.length; i++) {
-    nextNode = nodes[currentNode][input_string[i]];
+    nextNode = nodes[currentRegex][currentNode][input_string[i]];
     transition = `${currentNode}${nextNode}`;
     let transitionElement = document.getElementById(transition);
     let circleElement = document.getElementById(nextNode);
@@ -96,7 +99,39 @@ async function simulate() {
 }
 
 function validate() {
-  console.log("validate");
+  let input_string = document.getElementById("inputString").value;
+  console.log(input_string);
+  let nextNode, transition, currentNode;
+  currentNode = currentRegex == 1 ? "q0" : "w0";
+  for (i = 0; i < input_string.length; i++) {
+    if (currentRegex == 1) {
+      if (input_string[i] !== "a" && input_string[i] !== "b") {
+        console.log("invalid");
+        return;
+      }
+    } else {
+      if (input_string[i] !== "0" && input_string[i] !== "1") {
+        console.log("invalid");
+        return;
+      }
+    }
+
+    nextNode = nodes[currentRegex][currentNode][input_string[i]];
+    currentNode = nextNode;
+  }
+  if (currentRegex == 1) {
+    if (currentNode == "q8") {
+      console.log("valid");
+    } else {
+      console.log("invalid");
+    }
+  } else {
+    if (currentNode == "w9") {
+      console.log("valid");
+    } else {
+      console.log("invalid");
+    }
+  }
 }
 
 window.onload = function () {
