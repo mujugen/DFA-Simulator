@@ -990,7 +990,7 @@
             <svg
               id="pdaDiagramsvg"
               width="100%"
-              viewBox="0 0 780 360"
+              viewBox="0 0 360 1200"
               preserveAspectRatio="xMidYMid meet"
               xmlns="http://www.w2.org/2000/svg"
             >
@@ -1019,1078 +1019,182 @@
                 </marker>
               </defs>
               <g id="pdaDiagram1">
-                <!-- q0 to q1 transition -->
+                <!-- qstartbox to q0box transition -->
                 <g>
                   <line
-                    id="q0q1"
-                    x1="50"
-                    y1="50%"
-                    x2="150"
-                    y2="20%"
+                    id="qstartboxq0box"
+                    x1="52%"
+                    y1="100"
+                    x2="52%"
+                    y2="165"
+                    class="line transition-delay"
+                  />
+                </g>
+                <!-- qstartbox to q0box transition -->
+                <!-- q0box to q1box transition -->
+                <g>
+                  <line
+                    id="q0boxq1box"
+                    x1="52%"
+                    y1="175"
+                    x2="20%"
+                    y2="175"
                     class="line transition-delay"
                   />
                   <text
                     class="line-text"
-                    x="88"
-                    y="33%"
+                    x="37%"
+                    y="160"
                     alignment-baseline="middle"
                   >
                     a
                   </text>
                 </g>
-                <!-- q0 to q1 transition -->
-                <!-- q0 to q2 transition -->
+                <!-- q0box to q1box transition -->
+                <!-- q0box to q2box transition -->
                 <g>
                   <line
-                    x1="50"
-                    y1="50%"
-                    x2="240"
-                    y2="50%"
+                    id="q0boxq2box"
+                    x1="52%"
+                    y1="175"
+                    x2="52%"
+                    y2="290"
                     class="line transition-delay"
                   />
                   <text
                     class="line-text"
-                    x="150"
-                    y="47%"
+                    x="56%"
+                    y="230"
                     alignment-baseline="middle"
                   >
                     b
                   </text>
                 </g>
-                <!-- q0 to q2 transition -->
-                <!-- q1 to q2 transition -->
+                <!-- q0box to q2box transition -->
+                <!-- q1box to q2box transition -->
                 <g>
-                  <line
-                    x1="150"
-                    y1="20%"
-                    x2="250"
-                    y2="50%"
-                    class="line transition-delay"
+                  <path
+                    id="q1boxq2box"
+                    d="M 61 175 L 61 300 L 150 300"
+                    class="line-curved"
+                    marker-end="url(#arrow2)"
                   />
                   <text
                     class="line-text"
-                    x="212"
-                    y="33%"
+                    x="28%"
+                    y="285"
                     alignment-baseline="middle"
                   >
                     a,b
                   </text>
                 </g>
-                <!-- q1 to q2 transition -->
-                <!-- q2 to q3 transition -->
-                <g>
-                  <line
-                    x1="250"
-                    y1="50%"
-                    x2="350"
-                    y2="20%"
-                    class="line transition-delay"
-                  />
-                  <text
-                    class="line-text"
-                    x="288"
-                    y="33%"
-                    alignment-baseline="middle"
-                  >
-                    b
-                  </text>
-                </g>
-                <!-- q2 to q3 transition -->
-                <!-- q3 to q4 transition -->
-                <g>
-                  <line
-                    x1="350"
-                    y1="20%"
-                    x2="465"
-                    y2="20%"
-                    class="line transition-delay"
-                  />
-                  <text
-                    class="line-text"
-                    x="412.5"
-                    y="17%"
-                    alignment-baseline="middle"
-                  >
-                    b
-                  </text>
-                </g>
-                <!-- q3 to q4 transition -->
-                <!-- q4 to q7 transition -->
-                <g>
-                  <line
-                    x1="475"
-                    y1="20%"
-                    x2="575"
-                    y2="50%"
-                    class="line transition-delay"
-                  />
-                  <text
-                    class="line-text"
-                    x="537"
-                    y="33%"
-                    alignment-baseline="middle"
-                  >
-                    b
-                  </text>
-                </g>
-                <!-- q4 to q7 transition -->
-                <!-- q2 to q5 transition -->
-                <g>
-                  <line
-                    x1="250"
-                    y1="50%"
-                    x2="350"
-                    y2="80%"
-                    class="line transition-delay"
-                  />
-                  <text
-                    class="line-text"
-                    x="288"
-                    y="68%"
-                    alignment-baseline="middle"
-                  >
-                    a
-                  </text>
-                </g>
-                <!-- q2 to q5 transition -->
-                <!-- q5 to q6 transition -->
-                <g>
-                  <line
-                    x1="350"
-                    y1="80%"
-                    x2="465"
-                    y2="80%"
-                    class="line transition-delay"
-                  />
-                  <text
-                    class="line-text"
-                    x="412.5"
-                    y="77%"
-                    alignment-baseline="middle"
-                  >
-                    a
-                  </text>
-                </g>
-                <!-- q5 to q6 transition -->
-                <!-- q5 to q2 transition -->
-                <g>
-                  <path
-                    d="M 350 290 A 90 90 0 0 0 285 180"
-                    class="line-curved transition-delay"
-                  />
-
-                  <text
-                    class="line-text"
-                    x="350"
-                    y="62%"
-                    alignment-baseline="middle"
-                  >
-                    b
-                  </text>
-                </g>
-                <!-- q5 to q2 transition -->
-                <!-- q6 to q2 transition -->
-                <g>
-                  <path
-                    d="M 475 290 A 250 250 0 0 0 285 180"
-                    class="line-curved transition-delay"
-                  />
-
-                  <text
-                    class="line-text"
-                    x="435"
-                    y="62%"
-                    alignment-baseline="middle"
-                  >
-                    b
-                  </text>
-                </g>
-                <!-- q6 to q2 transition -->
-                <!-- q4 to q2 transition -->
-                <g>
-                  <path
-                    d="M 475 72 A 250 250 0 0 1 285 180"
-                    class="line-curved transition-delay"
-                  />
-
-                  <text
-                    class="line-text"
-                    x="410"
-                    y="42%"
-                    alignment-baseline="middle"
-                  >
-                    a
-                  </text>
-                </g>
-                <!-- q4 to q2 transition -->
-                <!-- q6 to q7 transition -->
-                <g>
-                  <line
-                    x1="475"
-                    y1="80%"
-                    x2="575"
-                    y2="50%"
-                    class="line transition-delay"
-                  />
-                  <text
-                    class="line-text"
-                    x="537"
-                    y="68%"
-                    alignment-baseline="middle"
-                  >
-                    a
-                  </text>
-                </g>
-                <!-- q6 to q7 transition -->
-                <!-- q7 to q8 transition -->
-                <g>
-                  <line
-                    x1="575"
-                    y1="50%"
-                    x2="685"
-                    y2="50%"
-                    class="line transition-delay"
-                  />
-                  <text
-                    class="line-text"
-                    x="637"
-                    y="47%"
-                    alignment-baseline="middle"
-                  >
-                    a,b
-                  </text>
-                </g>
-                <!-- q7 to q8 transition -->
-                <!-- q8 to q8 transition -->
-                <g>
-                  <path
-                    d="M 725 180 l 10 -10 A 1 1 0 0 0 710 150 l -5 5"
-                    class="line-curved transition-delay"
-                  />
-
-                  <text
-                    class="line-text"
-                    x="740"
-                    y="38%"
-                    alignment-baseline="middle"
-                  >
-                    a,b
-                  </text>
-                </g>
-                <!-- q8 to q8 transition -->
-                <!-- q0 circle -->
-                <g class="hover">
+                <!-- q1box to q2box transition -->
+                <!-- qstart -->
+                <g id="qstartbox" class="hover">
                   <rect
-                    width="50"
+                    width="100"
                     height="50"
-                    style="transform-origin: center; transform-box: fill-box"
-                    transform="rotate(45)"
-                    x="25"
-                    y="155"
+                    x="38%"
+                    y="50"
+                    rx="25"
+                    ry="25"
+                    style="transform: rotate(0deg)"
                   />
-                  <text
-                    x="50"
-                    y="50%"
-                    dy=".25em"
-                    dx="-.1em"
-                    style="
-                      font-size: 0.8rem;
-                      transform-origin: center;
-                      transform-box: fill-box;
-                    "
-                    transform="rotate(-90)"
-                  >
+                  <text x="52%" y="75" dy=".25em" dx="-.1em" class="box-text">
+                    Start
+                  </text>
+                </g>
+                <!-- qstart -->
+                <!-- q0 box -->
+                <g id="q0box" class="hover">
+                  <rect width="50" height="50" x="45%" y="150" />
+                  <text x="52%" y="175" dy=".25em" dx="-.1em" class="box-text">
+                    Read 0
+                  </text>
+                </g>
+                <!-- q0 box -->
+                <!-- q1 box -->
+                <g id="q1box" class="hover">
+                  <rect width="50" height="50" x="10%" y="150" />
+                  <text x="17%" y="175" dy=".25em" dx="-.1em" class="box-text">
                     Read 1
                   </text>
                 </g>
-                <!-- q0 circle -->
-                <!-- q1 circle -->
-                <g class="hover">
-                  <rect
-                    width="50"
-                    height="50"
-                    style="transform-origin: center; transform-box: fill-box"
-                    transform="rotate(45)"
-                    x="125"
-                    y="47"
-                  />
-                  <text
-                    x="150"
-                    y="20%"
-                    dy=".25em"
-                    dx="-.1em"
-                    style="
-                      font-size: 0.8rem;
-                      transform-origin: center;
-                      transform-box: fill-box;
-                    "
-                    transform="rotate(-90)"
-                  >
+                <!-- q1 box -->
+                <!-- q2 box -->
+                <g id="q2box" class="hover">
+                  <rect width="50" height="50" x="45%" y="275" />
+                  <text x="52%" y="300" dy=".25em" dx="-.1em" class="box-text">
                     Read 2
                   </text>
                 </g>
-                <!-- q1 circle -->
-                <!-- q2 circle -->
-                <g class="hover">
-                  <rect
-                    width="50"
-                    height="50"
-                    style="transform-origin: center; transform-box: fill-box"
-                    transform="rotate(45)"
-                    x="225"
-                    y="155"
-                  />
-                  <text
-                    x="250"
-                    y="50%"
-                    dy=".25em"
-                    dx="-.1em"
-                    style="
-                      font-size: 0.8rem;
-                      transform-origin: center;
-                      transform-box: fill-box;
-                    "
-                    transform="rotate(-90)"
-                  >
+                <!-- q2 box -->
+                <!-- q3 box -->
+                <g id="q3box" class="hover">
+                  <rect width="50" height="50" x="80%" y="400" />
+                  <text x="87%" y="425" dy=".25em" dx="-.1em" class="box-text">
                     Read 3
                   </text>
                 </g>
-                <!-- q2 circle -->
-                <!-- q3 circle -->
-                <g class="hover">
-                  <rect
-                    width="50"
-                    height="50"
-                    style="transform-origin: center; transform-box: fill-box"
-                    transform="rotate(45)"
-                    x="325"
-                    y="47"
-                  />
-                  <text
-                    x="350"
-                    y="20%"
-                    dy=".25em"
-                    dx="-.1em"
-                    style="
-                      font-size: 0.8rem;
-                      transform-origin: center;
-                      transform-box: fill-box;
-                    "
-                    transform="rotate(-90)"
-                  >
+                <!-- q3 box -->
+                <!-- q4 box -->
+                <g id="q4box" class="hover">
+                  <rect width="50" height="50" x="80%" y="525" />
+                  <text x="87%" y="550" dy=".25em" dx="-.1em" class="box-text">
                     Read 4
                   </text>
                 </g>
-                <!-- q3 circle -->
-                <!-- q4 circle -->
-                <g class="hover">
-                  <rect
-                    width="50"
-                    height="50"
-                    style="transform-origin: center; transform-box: fill-box"
-                    transform="rotate(45)"
-                    x="450"
-                    y="47"
-                  />
-                  <text
-                    x="475"
-                    y="20%"
-                    dy=".25em"
-                    dx="-.1em"
-                    style="
-                      font-size: 0.8rem;
-                      transform-origin: center;
-                      transform-box: fill-box;
-                    "
-                    transform="rotate(-90)"
-                  >
+                <!-- q4 box -->
+                <!-- q5 box -->
+                <g id="q5box" class="hover">
+                  <rect width="50" height="50" x="10%" y="400" />
+                  <text x="17%" y="425" dy=".25em" dx="-.1em" class="box-text">
                     Read 5
                   </text>
                 </g>
-                <!-- q4 circle -->
-                <!-- q5 circle -->
-                <g class="hover">
-                  <rect
-                    width="50"
-                    height="50"
-                    style="transform-origin: center; transform-box: fill-box"
-                    transform="rotate(45)"
-                    x="325"
-                    y="263"
-                  />
-                  <text
-                    x="350"
-                    y="80%"
-                    dy=".25em"
-                    dx="-.1em"
-                    style="
-                      font-size: 0.8rem;
-                      transform-origin: center;
-                      transform-box: fill-box;
-                    "
-                    transform="rotate(-90)"
-                  >
+                <!-- q5 box -->
+                <!-- q6 box -->
+                <g id="q6box" class="hover">
+                  <rect width="50" height="50" x="10%" y="525" />
+                  <text x="17%" y="550" dy=".25em" dx="-.1em" class="box-text">
                     Read 6
                   </text>
                 </g>
-                <!-- q5 circle -->
-                <!-- q6 circle -->
-                <g class="hover">
-                  <rect
-                    width="50"
-                    height="50"
-                    style="transform-origin: center; transform-box: fill-box"
-                    transform="rotate(45)"
-                    x="450"
-                    y="263"
-                  />
-                  <text
-                    x="475"
-                    y="80%"
-                    dy=".25em"
-                    dx="-.1em"
-                    style="
-                      font-size: 0.8rem;
-                      transform-origin: center;
-                      transform-box: fill-box;
-                    "
-                    transform="rotate(-90)"
-                  >
+                <!-- q6 box -->
+                <!-- q7 box -->
+                <g id="q7box" class="hover">
+                  <rect width="50" height="50" x="45%" y="525" />
+                  <text x="52%" y="550" dy=".25em" dx="-.1em" class="box-text">
                     Read 7
                   </text>
                 </g>
-                <!-- q6 circle -->
-                <!-- q7 circle -->
-                <g class="hover">
-                  <rect
-                    width="50"
-                    height="50"
-                    style="transform-origin: center; transform-box: fill-box"
-                    transform="rotate(45)"
-                    x="550"
-                    y="155"
-                  />
-                  <text
-                    x="575"
-                    y="50%"
-                    dy=".25em"
-                    dx="-.1em"
-                    style="
-                      font-size: 0.8rem;
-                      transform-origin: center;
-                      transform-box: fill-box;
-                    "
-                    transform="rotate(-90)"
-                  >
+                <!-- q7 box -->
+                <!-- q8 box -->
+                <g id="q8box" class="hover">
+                  <rect width="50" height="50" x="45%" y="650" />
+                  <text x="52%" y="675" dy=".25em" dx="-.1em" class="box-text">
                     Read 8
                   </text>
                 </g>
-                <!-- q7 circle -->
-                <!-- q8 circle -->
-                <g class="hover">
+                <!-- q8 box -->
+                <!-- qaccept -->
+                <g id="qacceptbox" class="hover">
                   <rect
-                    width="50"
+                    width="100"
                     height="50"
-                    style="transform-origin: center; transform-box: fill-box"
-                    transform="rotate(45)"
-                    x="670"
-                    y="155"
+                    x="38%"
+                    y="775"
+                    rx="25"
+                    ry="25"
+                    style="transform: rotate(0deg)"
                   />
-                  <text
-                    x="695"
-                    y="50%"
-                    dy=".25em"
-                    dx="-.1em"
-                    style="
-                      font-size: 0.8rem;
-                      transform-origin: center;
-                      transform-box: fill-box;
-                    "
-                    transform="rotate(-90)"
-                  >
-                    Read 9
+                  <text x="52%" y="800" dy=".25em" dx="-.1em" class="box-text">
+                    Accept
                   </text>
                 </g>
-                <!-- q8 circle -->
+                <!-- qaccept -->
               </g>
-              <g id="pdaDiagram2" class="d-none">
-                <!-- w0 to w1 transition -->
-                <g>
-                  <line
-                    x1="50"
-                    y1="50%"
-                    x2="150"
-                    y2="30%"
-                    class="line transition-delay"
-                  />
-                  <text
-                    class="line-text"
-                    x="88"
-                    y="38%"
-                    alignment-baseline="middle"
-                  >
-                    0
-                  </text>
-                </g>
-                <!-- w0 to w1 transition -->
-                <!-- w1 to w2 transition -->
-                <g>
-                  <line
-                    x1="150"
-                    y1="30%"
-                    x2="250"
-                    y2="10%"
-                    class="line transition-delay"
-                  />
-                  <text
-                    class="line-text"
-                    x="188"
-                    y="18%"
-                    alignment-baseline="middle"
-                  >
-                    Read 10
-                  </text>
-                </g>
-                <!-- w1 to w2 transition -->
-                <!-- w1 to w5 transition -->
-                <g>
-                  <line
-                    x1="150"
-                    y1="30%"
-                    x2="350"
-                    y2="50%"
-                    class="line transition-delay"
-                  />
-                  <text
-                    class="line-text"
-                    x="250"
-                    y="37%"
-                    alignment-baseline="middle"
-                  >
-                    0
-                  </text>
-                </g>
-                <!-- w1 to w5 transition -->
-                <!-- w0 to w3 transition -->
-                <g>
-                  <line
-                    x1="50"
-                    y1="50%"
-                    x2="150"
-                    y2="70%"
-                    class="line transition-delay"
-                  />
-                  <text
-                    class="line-text"
-                    x="88"
-                    y="63%"
-                    alignment-baseline="middle"
-                  >
-                    1
-                  </text>
-                </g>
-                <!-- w0 to w3 transition -->
-                <!-- w3 to w4 transition -->
-                <g>
-                  <line
-                    x1="150"
-                    y1="70%"
-                    x2="250"
-                    y2="90%"
-                    class="line transition-delay"
-                  />
-                  <text
-                    class="line-text"
-                    x="188"
-                    y="83%"
-                    alignment-baseline="middle"
-                  >
-                    0
-                  </text>
-                </g>
-                <!-- w3 to w4 transition -->
-                <!-- w3 to w5 transition -->
-                <g>
-                  <line
-                    x1="150"
-                    y1="70%"
-                    x2="350"
-                    y2="50%"
-                    class="line transition-delay"
-                  />
-                  <text
-                    class="line-text"
-                    x="250"
-                    y="63%"
-                    alignment-baseline="middle"
-                  >
-                    1
-                  </text>
-                </g>
-                <!-- w3 to w5 transition -->
-                <!-- w2 to w5 transition -->
-                <g>
-                  <line
-                    x1="250"
-                    y1="10%"
-                    x2="350"
-                    y2="50%"
-                    class="line transition-delay"
-                  />
-                  <text
-                    class="line-text"
-                    x="310"
-                    y="25%"
-                    alignment-baseline="middle"
-                  >
-                    0
-                  </text>
-                </g>
-                <!-- w2 to w5 transition -->
-                <!-- w2 to w0 transition -->
-                <g>
-                  <path
-                    d="M 250 30 A 180 180 0 0 0 50 145"
-                    class="line-curved transition-delay"
-                  />
-
-                  <text
-                    class="line-text"
-                    x="110"
-                    y="12%"
-                    alignment-baseline="middle"
-                  >
-                    1
-                  </text>
-                </g>
-                <!-- w2 to w0 transition -->
-                <!-- w4 to w5 transition -->
-                <g>
-                  <line
-                    x1="250"
-                    y1="90%"
-                    x2="350"
-                    y2="50%"
-                    class="line transition-delay"
-                  />
-                  <text
-                    class="line-text"
-                    x="310"
-                    y="75%"
-                    alignment-baseline="middle"
-                  >
-                    1
-                  </text>
-                </g>
-                <!-- w4 to w5 transition -->
-                <!-- w5 to w6 transition -->
-                <g>
-                  <line
-                    x1="350"
-                    y1="50%"
-                    x2="475"
-                    y2="30%"
-                    class="line transition-delay"
-                  />
-                  <text
-                    class="line-text"
-                    x="400"
-                    y="37%"
-                    alignment-baseline="middle"
-                  >
-                    1
-                  </text>
-                </g>
-                <!-- w5 to w6 transition -->
-                <!-- w5 to w7 transition -->
-                <g>
-                  <line
-                    x1="350"
-                    y1="50%"
-                    x2="475"
-                    y2="70%"
-                    class="line transition-delay"
-                  />
-                  <text
-                    class="line-text"
-                    x="400"
-                    y="63%"
-                    alignment-baseline="middle"
-                  >
-                    0
-                  </text>
-                </g>
-                <!-- w5 to w7 transition -->
-                <!-- w6 to w8 transition -->
-                <g>
-                  <line
-                    x1="450"
-                    y1="30%"
-                    x2="600"
-                    y2="50%"
-                    class="line transition-delay"
-                  />
-                  <text
-                    class="line-text"
-                    x="530"
-                    y="37%"
-                    alignment-baseline="middle"
-                  >
-                    1
-                  </text>
-                </g>
-                <!-- w6 to w8 transition -->
-                <!-- w6 to w5 transition -->
-                <g>
-                  <path
-                    d="M 475 108 A 85 85 0 0 0 350 145"
-                    class="line-curved transition-delay"
-                  />
-
-                  <text
-                    class="line-text"
-                    x="390"
-                    y="25%"
-                    alignment-baseline="middle"
-                  >
-                    0
-                  </text>
-                </g>
-                <!-- w6 to w5 transition -->
-                <!-- w7 to w5 transition -->
-                <g>
-                  <path
-                    d="M 475 252 A 85 85 0 0 1 350 215"
-                    class="line-curved transition-delay"
-                  />
-
-                  <text
-                    class="line-text"
-                    x="390"
-                    y="75%"
-                    alignment-baseline="middle"
-                  >
-                    1
-                  </text>
-                </g>
-                <!-- w7 to w5 transition -->
-                <!-- w7 to w8 transition -->
-                <g>
-                  <line
-                    x1="450"
-                    y1="70%"
-                    x2="600"
-                    y2="50%"
-                    class="line transition-delay"
-                  />
-                  <text
-                    class="line-text"
-                    x="530"
-                    y="63%"
-                    alignment-baseline="middle"
-                  >
-                    0
-                  </text>
-                </g>
-                <!-- w7 to w8 transition -->
-                <!-- w8 to w9 transition -->
-                <g>
-                  <line
-                    x1="600"
-                    y1="50%"
-                    x2="685"
-                    y2="50%"
-                    class="line transition-delay"
-                  />
-                  <text
-                    class="line-text"
-                    x="650"
-                    y="45%"
-                    alignment-baseline="middle"
-                  >
-                    1,0
-                  </text>
-                </g>
-                <!-- w8 to w9 transition -->
-                <!-- w9 to w9 transition -->
-                <g>
-                  <path
-                    d="M 725 180 l 10 -10 A 1 1 0 0 0 710 150 l -5 5"
-                    class="line-curved transition-delay"
-                  />
-
-                  <text
-                    class="line-text"
-                    x="740"
-                    y="38%"
-                    alignment-baseline="middle"
-                  >
-                    1,0
-                  </text>
-                </g>
-                <!-- w9 to w9 transition -->
-
-                <!-- w0 circle -->
-                <g class="hover">
-                  <rect
-                    width="50"
-                    height="50"
-                    style="transform-origin: center; transform-box: fill-box"
-                    transform="rotate(45)"
-                    x="25"
-                    y="155"
-                  />
-                  <text
-                    x="50"
-                    y="50%"
-                    dy=".25em"
-                    dx="-.1em"
-                    style="
-                      font-size: 0.8rem;
-                      transform-origin: center;
-                      transform-box: fill-box;
-                    "
-                    transform="rotate(-90)"
-                  >
-                    Read 1
-                  </text>
-                </g>
-                <!-- w0 circle -->
-                <!-- w1 circle -->
-                <g class="hover">
-                  <rect
-                    width="50"
-                    height="50"
-                    style="transform-origin: center; transform-box: fill-box"
-                    transform="rotate(45)"
-                    x="125"
-                    y="80"
-                  />
-                  <text
-                    x="150"
-                    y="30%"
-                    dy=".25em"
-                    dx="-.1em"
-                    style="
-                      font-size: 0.8rem;
-                      transform-origin: center;
-                      transform-box: fill-box;
-                    "
-                    transform="rotate(-90)"
-                  >
-                    Read 2
-                  </text>
-                </g>
-                <!-- w1 circle -->
-                <!-- w2 circle -->
-                <g class="hover">
-                  <rect
-                    width="50"
-                    height="50"
-                    style="transform-origin: center; transform-box: fill-box"
-                    transform="rotate(45)"
-                    x="225"
-                    y="10"
-                  />
-                  <text
-                    x="250"
-                    y="10%"
-                    dy=".25em"
-                    dx="-.1em"
-                    style="
-                      font-size: 0.8rem;
-                      transform-origin: center;
-                      transform-box: fill-box;
-                    "
-                    transform="rotate(-90)"
-                  >
-                    Read 3
-                  </text>
-                </g>
-                <!-- w2 circle -->
-                <!-- w3 circle -->
-                <g class="hover">
-                  <rect
-                    width="50"
-                    height="50"
-                    style="transform-origin: center; transform-box: fill-box"
-                    transform="rotate(45)"
-                    x="125"
-                    y="225"
-                  />
-                  <text
-                    x="150"
-                    y="70%"
-                    dy=".25em"
-                    dx="-.1em"
-                    style="
-                      font-size: 0.8rem;
-                      transform-origin: center;
-                      transform-box: fill-box;
-                    "
-                    transform="rotate(-90)"
-                  >
-                    Read 4
-                  </text>
-                </g>
-                <!-- w3 circle -->
-                <!-- w4 circle -->
-                <g class="hover">
-                  <rect
-                    width="50"
-                    height="50"
-                    style="transform-origin: center; transform-box: fill-box"
-                    transform="rotate(45)"
-                    x="225"
-                    y="300"
-                  />
-                  <text
-                    x="250"
-                    y="90%"
-                    dy=".25em"
-                    dx="-.1em"
-                    style="
-                      font-size: 0.8rem;
-                      transform-origin: center;
-                      transform-box: fill-box;
-                    "
-                    transform="rotate(-90)"
-                  >
-                    w4
-                  </text>
-                </g>
-                <!-- w4 circle -->
-                <!-- w5 circle -->
-                <g class="hover">
-                  <rect
-                    width="50"
-                    height="50"
-                    style="transform-origin: center; transform-box: fill-box"
-                    transform="rotate(45)"
-                    x="325"
-                    y="155"
-                  />
-                  <text
-                    x="350"
-                    y="50%"
-                    dy=".25em"
-                    dx="-.1em"
-                    style="
-                      font-size: 0.8rem;
-                      transform-origin: center;
-                      transform-box: fill-box;
-                    "
-                    transform="rotate(-90)"
-                  >
-                    w5
-                  </text>
-                </g>
-                <!-- w5 circle -->
-                <!-- w6 circle -->
-                <g class="hover">
-                  <rect
-                    width="50"
-                    height="50"
-                    style="transform-origin: center; transform-box: fill-box"
-                    transform="rotate(45)"
-                    x="450"
-                    y="80"
-                  />
-                  <text
-                    x="475"
-                    y="30%"
-                    dy=".25em"
-                    dx="-.1em"
-                    style="
-                      font-size: 0.8rem;
-                      transform-origin: center;
-                      transform-box: fill-box;
-                    "
-                    transform="rotate(-90)"
-                  >
-                    w6
-                  </text>
-                </g>
-                <!-- w6 circle -->
-                <!-- w7 circle -->
-                <g class="hover">
-                  <rect
-                    width="50"
-                    height="50"
-                    style="transform-origin: center; transform-box: fill-box"
-                    transform="rotate(45)"
-                    x="450"
-                    y="225"
-                  />
-                  <text
-                    x="475"
-                    y="70%"
-                    dy=".25em"
-                    dx="-.1em"
-                    style="
-                      font-size: 0.8rem;
-                      transform-origin: center;
-                      transform-box: fill-box;
-                    "
-                    transform="rotate(-90)"
-                  >
-                    w7
-                  </text>
-                </g>
-                <!-- w7 circle -->
-                <!-- w8 circle -->
-                <g class="hover">
-                  <rect
-                    width="50"
-                    height="50"
-                    style="transform-origin: center; transform-box: fill-box"
-                    transform="rotate(45)"
-                    x="575"
-                    y="155"
-                  />
-                  <text
-                    x="600"
-                    y="50%"
-                    dy=".25em"
-                    dx="-.1em"
-                    style="
-                      font-size: 0.8rem;
-                      transform-origin: center;
-                      transform-box: fill-box;
-                    "
-                    transform="rotate(-90)"
-                  >
-                    w8
-                  </text>
-                </g>
-                <!-- w8 circle -->
-                <!-- w9 circle -->
-                <g class="hover">
-                  <rect
-                    width="50"
-                    height="50"
-                    style="transform-origin: center; transform-box: fill-box"
-                    transform="rotate(45)"
-                    x="670"
-                    y="155"
-                  />
-                  <text
-                    x="695"
-                    y="50%"
-                    dy=".25em"
-                    dx="-.1em"
-                    style="
-                      font-size: 0.8rem;
-                      transform-origin: center;
-                      transform-box: fill-box;
-                    "
-                    transform="rotate(-90)"
-                  >
-                    w9
-                  </text>
-                </g>
-                <!-- w9 circle -->
-              </g>
+              <g id="pdaDiagram2" class="d-none"></g>
             </svg>
           </div>
         </div>

@@ -220,7 +220,7 @@ function validate() {
 }
 
 window.onload = function () {
-  switchRegex();
+  //switchRegex();
 
   simulateBtn.disabled = true;
 };
