@@ -3,6 +3,7 @@ let regex2 =
   "(1+0)* (11+00+101+010) (1+0+11+00+101)* (11+00) (11+00+101)* (1+0) (1+0+11)*";
 var currentRegex = 1;
 function switchRegex() {
+  clearInput();
   let regexLabel = document.getElementById("regexLabel");
   let languageLabel = document.getElementById("languageLabel");
   let regexDiagram1 = document.getElementById("regexDiagram1");
