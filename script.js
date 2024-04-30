@@ -221,9 +221,6 @@ async function simulate() {
 
   for (let i = 0; i < input_string.length; i++) {
     nextNode = nodes[currentRegex][currentNode][input_string[i]];
-    /* console.log(pda_nodes);
-    console.log(pda_nodes[currentRegex]);
-    console.log(pda_nodes[currentRegex]); */
     nextNodePda = pda_nodes[currentRegex][currentNodePda][input_string[i]];
 
     transition = `${currentNode}${nextNode}`;
@@ -245,7 +242,6 @@ async function simulate() {
     ) {
       boxElementPda.classList.add("transition");
       boxElementPda.classList.add("hovered");
-      console.log(transitionPda);
       transitionElementPda.classList.add("transition");
     }
 
