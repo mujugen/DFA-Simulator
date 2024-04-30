@@ -47,6 +47,9 @@ body {
 .hovered > circle {
   fill: #0062ff !important;
 }
+.hovered > rect {
+  fill: #0062ff !important;
+}
 
 .hovered > text {
   stroke: white !important;

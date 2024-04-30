@@ -118,6 +118,85 @@ var nodes = {
   },
 };
 
+var pda_nodes = {
+  1: {
+    q0box: {
+      a: "q1box",
+      b: "q2box",
+    },
+    q1box: {
+      a: "q2box",
+      b: "q2box",
+    },
+    q2box: {
+      a: "q5box",
+      b: "q3box",
+    },
+    q3box: {
+      a: "q2box",
+      b: "q4box",
+    },
+    q4box: {
+      a: "q2box",
+      b: "q7box",
+    },
+    q5box: {
+      a: "q6box",
+      b: "q2box",
+    },
+    q6box: {
+      a: "q7box",
+      b: "q2box",
+    },
+    q7box: {
+      a: "qacceptbox",
+      b: "qacceptbox",
+    },
+    qacceptbox: {
+      a: "qacceptbox",
+      b: "qacceptbox",
+    },
+  },
+  2: {
+    w0box: {
+      0: "w1box",
+      1: "w2box",
+    },
+    w1box: {
+      0: "w4box",
+      1: "w3box",
+    },
+    w2box: {
+      0: "w3box",
+      1: "w4box",
+    },
+    w3box: {
+      0: "w4box",
+      1: "w4box",
+    },
+    w4box: {
+      0: "w5box",
+      1: "w6box",
+    },
+    w5box: {
+      0: "w7box",
+      1: "w6box",
+    },
+    w6box: {
+      0: "w5box",
+      1: "w7box",
+    },
+    w7box: {
+      0: "wacceptbox",
+      1: "wacceptbox",
+    },
+    wacceptbox: {
+      0: "wacceptbox",
+      1: "wacceptbox",
+    },
+  },
+};
+
 let input_display = document.getElementById("input-display");
 let simulateBtn = document.getElementById("simulateBtn");
 
@@ -125,7 +204,9 @@ async function simulate() {
   let input_string = document.getElementById("inputString").value;
   console.log(input_string);
   let nextNode, transition, currentNode;
+  let nextNodePda, transitionPda, currentNodePda;
   currentNode = currentRegex == 1 ? "q0" : "w0";
+  currentNodePda = currentRegex == 1 ? "q0box" : "w0box";
   let input_display = document.getElementById("input-display");
   input_display.classList.remove("red");
   input_display.classList.remove("blue");
@@ -140,12 +221,33 @@ async function simulate() {
 
   for (let i = 0; i < input_string.length; i++) {
     nextNode = nodes[currentRegex][currentNode][input_string[i]];
+    /* console.log(pda_nodes);
+    console.log(pda_nodes[currentRegex]);
+    console.log(pda_nodes[currentRegex]); */
+    nextNodePda = pda_nodes[currentRegex][currentNodePda][input_string[i]];
+
     transition = `${currentNode}${nextNode}`;
+
+    transitionPda = `${currentNodePda}${nextNodePda}`;
     let transitionElement = document.getElementById(transition);
+    let transitionElementPda = document.getElementById(transitionPda);
     let circleElement = document.getElementById(nextNode);
+    let boxElementPda = document.getElementById(nextNodePda);
     circleElement.classList.add("transition");
     circleElement.classList.add("hovered");
+
     transitionElement.classList.add("transition");
+    if (
+      !(
+        transitionPda == "wacceptboxwacceptbox" ||
+        transitionPda == "qacceptboxqacceptbox"
+      )
+    ) {
+      boxElementPda.classList.add("transition");
+      boxElementPda.classList.add("hovered");
+      console.log(transitionPda);
+      transitionElementPda.classList.add("transition");
+    }
 
     // Highlight the current letter using span element
     let spanElement = input_display.children[i];
@@ -156,11 +258,23 @@ async function simulate() {
     circleElement.classList.remove("hovered");
     transitionElement.classList.remove("transition");
 
+    if (
+      !(
+        transitionPda == "wacceptboxwacceptbox" ||
+        transitionPda == "qacceptboxqacceptbox"
+      )
+    ) {
+      boxElementPda.classList.remove("transition");
+      boxElementPda.classList.remove("hovered");
+      transitionElementPda.classList.remove("transition");
+    }
+
     // Remove highlighting after delay
     spanElement.classList.remove("big");
 
     await sleep(500);
     currentNode = nextNode;
+    currentNodePda = nextNodePda;
   }
 
   simulateBtn.disabled = true;
@@ -220,7 +334,7 @@ function validate() {
 }
 
 window.onload = function () {
-  switchRegex();
+  //switchRegex();
 
   simulateBtn.disabled = true;
 };
