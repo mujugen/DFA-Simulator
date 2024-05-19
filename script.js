@@ -231,6 +231,9 @@ async function simulate() {
     let transitionElementPda = document.getElementById(transitionPda);
     let circleElement = document.getElementById(nextNode);
     let boxElementPda = document.getElementById(nextNodePda);
+    if (currentNode == nextNode) {
+      await sleep(200);
+    }
     circleElement.classList.add("transition");
     circleElement.classList.add("hovered");
 
