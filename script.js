@@ -51,20 +51,20 @@ var nodes = {
       b: "q3",
     },
     q3: {
-      a: "q2",
+      a: "q5",
       b: "q4",
     },
     q4: {
-      a: "q2",
+      a: "q5",
       b: "q7",
     },
     q5: {
       a: "q6",
-      b: "q2",
+      b: "q3",
     },
     q6: {
       a: "q7",
-      b: "q2",
+      b: "q3",
     },
     q7: {
       a: "q8",
@@ -285,6 +285,7 @@ function validate() {
   input_display.innerHTML = input_string;
   input_display.classList.remove("red");
   input_display.classList.remove("blue");
+  let valid = true;
 
   for (i = 0; i < input_string.length; i++) {
     if (currentRegex == 1) {
@@ -292,6 +293,7 @@ function validate() {
         console.log("invalid");
         input_display.classList.add("red");
         simulateBtn.disabled = true;
+        valid = false;
         return;
       }
     } else {
@@ -299,34 +301,14 @@ function validate() {
         console.log("invalid");
         input_display.classList.add("red");
         simulateBtn.disabled = true;
+        valid = false;
         return;
       }
     }
-
-    nextNode = nodes[currentRegex][currentNode][input_string[i]];
-    currentNode = nextNode;
   }
-  if (currentRegex == 1) {
-    if (currentNode == "q8") {
-      console.log("valid");
-      input_display.classList.add("blue");
-      simulateBtn.disabled = false;
-    } else {
-      console.log("invalid");
-      input_display.classList.add("red");
-      simulateBtn.disabled = true;
-    }
-  } else {
-    if (currentNode == "w9") {
-      console.log("valid");
-      input_display.classList.add("blue");
-
-      simulateBtn.disabled = false;
-    } else {
-      console.log("invalid");
-      input_display.classList.add("red");
-      simulateBtn.disabled = true;
-    }
+  if (valid) {
+    input_display.classList.add("blue");
+    simulateBtn.disabled = false;
   }
 }
 
