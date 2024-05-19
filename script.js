@@ -81,40 +81,36 @@ var nodes = {
       1: "w3",
     },
     w1: {
-      0: "w5",
+      0: "w4",
       1: "w2",
     },
     w2: {
-      0: "w5",
-      1: "w0",
+      0: "w4",
+      1: "w4",
     },
     w3: {
-      0: "w4",
-      1: "w5",
+      0: "w2",
+      1: "w4",
     },
     w4: {
-      0: "w0",
+      0: "w6",
       1: "w5",
     },
     w5: {
-      0: "w7",
-      1: "w6",
+      0: "w6",
+      1: "w7",
     },
     w6: {
       0: "w7",
-      1: "w8",
+      1: "w5",
     },
     w7: {
       0: "w8",
-      1: "w6",
+      1: "w8",
     },
     w8: {
-      0: "w9",
-      1: "w9",
-    },
-    w9: {
-      0: "w9",
-      1: "w9",
+      0: "w8",
+      1: "w8",
     },
   },
 };
@@ -223,7 +219,8 @@ async function simulate() {
   for (let i = 0; i < input_string.length; i++) {
     nextNode = nodes[currentRegex][currentNode][input_string[i]];
     nextNodePda = pda_nodes[currentRegex][currentNodePda][input_string[i]];
-
+    console.log(`current: ${currentNode}`);
+    console.log(`next: ${nextNode}`);
     transition = `${currentNode}${nextNode}`;
 
     transitionPda = `${currentNodePda}${nextNodePda}`;
@@ -292,7 +289,7 @@ async function simulate() {
       simulateBtn.disabled = true;
     }
   } else {
-    if (currentNode == "w9") {
+    if (currentNode == "w8") {
       console.log("valid");
       openModal("Valid String");
       input_display.classList.add("blue");
@@ -343,7 +340,7 @@ function validate() {
 }
 
 window.onload = function () {
-  //switchRegex();
+  switchRegex();
 
   simulateBtn.disabled = true;
 };
