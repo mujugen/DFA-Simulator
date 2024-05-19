@@ -364,9 +364,21 @@ function clearInput() {
 function openModal(text) {
   // Get the modal
   var modal = document.getElementById("myModal");
+  var statusParent = document.getElementById("statusParent");
+  var check = document.getElementById("check");
+  var cross = document.getElementById("cross");
   var modalText = document.getElementById("modal-text");
   modalText.innerText = text;
-  modal.style.display = "block";
+  modal.style.display = "flex";
+  if (text == "Valid String") {
+    statusParent.style.backgroundColor = "rgb(34 197 94)";
+    check.style.display = "block";
+    cross.style.display = "none";
+  } else {
+    statusParent.style.backgroundColor = "rgb(185 28 28)";
+    check.style.display = "none";
+    cross.style.display = "block";
+  }
 }
 function closeModal() {
   var modal = document.getElementById("myModal");
