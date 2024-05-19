@@ -134,20 +134,20 @@ var pda_nodes = {
       b: "q3box",
     },
     q3box: {
-      a: "q2box",
+      a: "q5box",
       b: "q4box",
     },
     q4box: {
-      a: "q2box",
+      a: "q5box",
       b: "q7box",
     },
     q5box: {
       a: "q6box",
-      b: "q2box",
+      b: "q3box",
     },
     q6box: {
       a: "q7box",
-      b: "q2box",
+      b: "q3box",
     },
     q7box: {
       a: "qacceptbox",
@@ -269,12 +269,39 @@ async function simulate() {
     // Remove highlighting after delay
     spanElement.classList.remove("big");
 
-    await sleep(500);
     currentNode = nextNode;
     currentNodePda = nextNodePda;
   }
 
   simulateBtn.disabled = true;
+  await sleep(500);
+
+  if (currentRegex == 1) {
+    if (currentNode == "q8") {
+      console.log("valid");
+      openModal("Valid String");
+      input_display.classList.add("blue");
+      simulateBtn.disabled = false;
+    } else {
+      console.log("invalid");
+      openModal("Invalid String");
+      input_display.classList.add("red");
+      simulateBtn.disabled = true;
+    }
+  } else {
+    if (currentNode == "w9") {
+      console.log("valid");
+      openModal("Valid String");
+      input_display.classList.add("blue");
+
+      simulateBtn.disabled = false;
+    } else {
+      console.log("invalid");
+      openModal("Invalid String");
+      input_display.classList.add("red");
+      simulateBtn.disabled = true;
+    }
+  }
 }
 
 function validate() {
@@ -332,4 +359,16 @@ function clearInput() {
   input_display.classList.remove("red");
   input_display.innerHTML = "";
   simulateBtn.disabled = true;
+}
+
+function openModal(text) {
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  var modalText = document.getElementById("modal-text");
+  modalText.innerText = text;
+  modal.style.display = "block";
+}
+function closeModal() {
+  var modal = document.getElementById("myModal");
+  modal.style.display = "none";
 }

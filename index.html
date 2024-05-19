@@ -19,6 +19,19 @@
     <title>Automata</title>
   </head>
   <body>
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span
+          class="close"
+          style="margin-left: auto; align-self: last; text-align: end"
+          onclick="closeModal()"
+          >&times;</span
+        >
+        <p id="modal-text">Valid String</p>
+      </div>
+    </div>
     <div
       class="d-flex align-items-center flex-row w-100 h-100 justify-content-center background contentParent"
     >
@@ -1143,24 +1156,24 @@
                   </text>
                 </g>
                 <!-- q5box to q6box transition -->
-                <!-- q5box to q2box transition -->
+                <!-- q5box to q3box transition -->
                 <g>
                   <path
-                    id="q5boxq2box"
-                    d="M 61 425 L 0 425 L 0 300 L 61 300"
+                    id="q5boxq3box"
+                    d="M 95 425 L 120 400 L 250 400 L 275 425"
                     class="line-curved"
                     marker-end="url(#arrow2)"
                   />
                   <text
                     class="line-text"
-                    x="15"
-                    y="360"
+                    x="185"
+                    y="390"
                     alignment-baseline="middle"
                   >
                     b
                   </text>
                 </g>
-                <!-- q5box to q2box transition -->
+                <!-- q5box to q3box transition -->
                 <!-- q6box to q7box transition -->
                 <g>
                   <path
@@ -1179,24 +1192,24 @@
                   </text>
                 </g>
                 <!-- q6box to q7box transition -->
-                <!-- q6box to q2box transition -->
+                <!-- q6box to q3box transition -->
                 <g>
                   <path
-                    id="q6boxq2box"
-                    d="M 61 550 L 0 550 L 0 425"
+                    id="q6boxq3box"
+                    d="M 61 550 L 15 550 L 15 720 L 375 720 L 375 425 L 350 425"
                     class="line-curved"
                     marker-end="url(#arrow2)"
                   />
                   <text
                     class="line-text"
-                    x="15"
-                    y="480"
+                    x="30"
+                    y="625"
                     alignment-baseline="middle"
                   >
                     b
                   </text>
                 </g>
-                <!-- q6box to q2box transition -->
+                <!-- q6box to q3box transition -->
                 <!-- q3box to q4box transition -->
                 <g>
                   <path
@@ -1215,42 +1228,42 @@
                   </text>
                 </g>
                 <!-- q3box to q4box transition -->
-                <!-- q3box to q2box transition -->
+                <!-- q3box to q5box transition -->
                 <g>
                   <path
-                    id="q3boxq2box"
-                    d="M 312 425 L 360 425 L 360 228 L 188 228"
+                    id="q3boxq5box"
+                    d="M 275 425 L 250 450 L 120 450 L 95 425"
+                    class="line-curved"
+                    marker-end="url(#arrow2)"
+                  />
+                  <text
+                    class="line-text"
+                    x="185"
+                    y="465"
+                    alignment-baseline="middle"
+                  >
+                    a
+                  </text>
+                </g>
+                <!-- q3box to q5box transition -->
+                <!-- q4box to q5box transition -->
+                <g>
+                  <path
+                    id="q4boxq5box"
+                    d="M 312 550 L 360 550 L 360 750 L 0 750 L 0 425 L 27 425 "
                     class="line-curved"
                     marker-end="url(#arrow2)"
                   />
                   <text
                     class="line-text"
                     x="345"
-                    y="360"
+                    y="625"
                     alignment-baseline="middle"
                   >
                     a
                   </text>
                 </g>
-                <!-- q3box to q2box transition -->
-                <!-- q4box to q2box transition -->
-                <g>
-                  <path
-                    id="q4boxq2box"
-                    d="M 312 550 L 360 550 L 360 425"
-                    class="line-curved"
-                    marker-end="url(#arrow2)"
-                  />
-                  <text
-                    class="line-text"
-                    x="345"
-                    y="480"
-                    alignment-baseline="middle"
-                  >
-                    a
-                  </text>
-                </g>
-                <!-- q4box to q2box transition -->
+                <!-- q4box to q5box transition -->
                 <!-- q4box to q7box transition -->
                 <g>
                   <path
